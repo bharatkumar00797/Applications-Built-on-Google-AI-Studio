@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "id": { "type": "string", "description": "Unique Firebase Auth user ID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "User full display name" },
+        "photoURL": { "type": "string", "description": "Avatar URL" },
+        "role": { "type": "string", "description": "Role: visitor or admin" },
+        "createdAt": { "type": "string", "description": "Creation ISO timestamp" }
+      }
+    },
+    "Inquiry": {
+      "collection": "inquiries",
+      "fields": {
+        "id": { "type": "string", "description": "Inquiry identifier" },
+        "name": { "type": "string", "description": "Sender name" },
+        "email": { "type": "string", "description": "Sender email" },
+        "company": { "type": "string", "description": "Sender company or organization" },
+        "subject": { "type": "string", "description": "Message subject" },
+        "message": { "type": "string", "description": "Message body" },
+        "userId": { "type": "string", "description": "Auth UID if authenticated, or anonymous" },
+        "createdAt": { "type": "string", "description": "Submission ISO timestamp" }
+      }
+    },
+    "ProjectReview": {
+      "collection": "projectReviews",
+      "fields": {
+        "id": { "type": "string", "description": "Review identifier" },
+        "projectId": { "type": "string", "description": "Associated project ID" },
+        "rating": { "type": "number", "description": "Rating score 1 to 5" },
+        "comment": { "type": "string", "description": "Review comments or endorsement" },
+        "userName": { "type": "string", "description": "Reviewer name" },
+        "userEmail": { "type": "string", "description": "Reviewer email" },
+        "createdAt": { "type": "string", "description": "Review timestamp" }
+      }
+    }
+  }
+}

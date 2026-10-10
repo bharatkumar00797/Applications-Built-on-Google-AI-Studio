@@ -96,10 +96,10 @@ export const generateResumePdf = () => {
   const skillsList = [
     { label: "AI & LLMs", text: "Prompt Engineering, AI Agents, LLM tool/function calling, structured output (Pydantic), agent evaluation (LLM-as-judge), OpenAI/Anthropic APIs, RAG fundamentals" },
     { label: "Languages", text: "Python, C#, JavaScript, PHP, SQL" },
-    { label: "Frameworks & Tools", text: "Vercel v0, Railway.app, .NET, Xamarin, WordPress, Git, REST APIs" },
+    { label: "Frameworks & Tools", text: "v0, Railway.app, .NET, Xamarin, WordPress, Git, REST APIs" },
     { label: "Databases", text: "SQL (Advanced), MySQL, database design and optimization" },
     { label: "Cloud", text: "AWS EC2, Lambda, MySQL on RDS-style setups, snapshots" },
-    { label: "Certifications", text: "Google Data Analytics, Cyber Security Foundations, SQL Advanced" },
+    { label: "Certifications", text: "Google Data Analytics, CyberSecurity Foundations, SQL Advanced" },
   ];
 
   skillsList.forEach((sk) => {
@@ -124,7 +124,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "bold");
   doc.setFontSize(9.5);
   doc.setTextColor(15, 23, 42);
-  doc.text("AI Engineer — Self-directed Learning & Portfolio Projects", margin, y);
+  doc.text("AI Engineer (Self-directed)", margin, y);
   y += 11;
 
   doc.setFont("times", "italic");
@@ -136,8 +136,9 @@ export const generateResumePdf = () => {
   doc.text(date1, margin + contentWidth - doc.getTextWidth(date1), y);
   y += 11;
 
-  addBullet("Building AI agents with LLM tool-calling, structured prompting, and state persistence — designing stop conditions, failure logging, and crash-recovery patterns for reliable autonomous runs.");
-  addBullet("Shipping projects in public on GitHub with proper READMEs: problem statement, architecture, demo GIFs, and reproducible setup.");
+  addBullet("Released four AI agent projects at v1.0.0 on GitHub, each with automated tests and CI.");
+  addBullet("Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).");
+  addBullet("Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.");
   y += 4;
 
   // Experience 2: Relationship Manager
@@ -214,13 +215,13 @@ export const generateResumePdf = () => {
   doc.setFont("times", "italic");
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
-  doc.text("Pi Network  |  Toronto, ON, Canada (Remote)", margin, y);
+  doc.text("Pi Network (Freelance)  |  Toronto, ON, Canada (Remote)", margin, y);
   doc.setFont("times", "normal");
   const date5 = "Jul 2020 – Mar 2024";
   doc.text(date5, margin + contentWidth - doc.getTextWidth(date5), y);
   y += 11;
 
-  addBullet("Reviewed and verified user-submitted identity documents against KYC requirements; flagged suspicious applications to prevent fraud.");
+  addBullet("Reviewed and verified user-submitted identity documents against KYC requirements; flagged applications that needed further review.");
   addBullet("Maintained accurate verification records and guided users through the KYC process; reported recurring issues to the review team.");
   y += 5;
 
@@ -253,7 +254,7 @@ export const generateResumePdf = () => {
   doc.setTextColor(15, 23, 42);
   doc.text("AI Agents — Agent Engineering Portfolio (GitHub)", margin, y);
   y += 11;
-  addBullet("Designing agents with production patterns: tool/function calling, structured output (Pydantic), iterative prompt evaluation, and bounded agent loops with explicit stop conditions.");
+  addBullet("Designing agents with tool/function calling, structured output (Pydantic), iterative prompt evaluation, and bounded agent loops with explicit stop conditions.");
   addBullet("Implemented LLM-as-judge evaluation harness (golden test set + automated scoring) and state checkpointing so agents resume correctly after process crashes.");
   y += 4;
 
@@ -282,14 +283,14 @@ export const generateResumePdf = () => {
   doc.setFont("times", "bold");
   doc.setFontSize(9.5);
   doc.setTextColor(15, 23, 42);
-  doc.text("Ontario College Graduate Certificate — Project Management", margin, y);
+  doc.text("Graduate Certificate in Project Management", margin, y);
   y += 11;
   doc.setFont("times", "italic");
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
   doc.text("Loyalist College, Canada", margin, y);
   doc.setFont("times", "normal");
-  const edu1 = "Sep 2021 – Jun 2022";
+  const edu1 = "2021 – 2022";
   doc.text(edu1, margin + contentWidth - doc.getTextWidth(edu1), y);
   y += 14;
 
@@ -297,14 +298,14 @@ export const generateResumePdf = () => {
   doc.setFont("times", "bold");
   doc.setFontSize(9.5);
   doc.setTextColor(15, 23, 42);
-  doc.text("Ontario College Graduate Certificate — Computer Software & Database Development", margin, y);
+  doc.text("Graduate Certificate in Software & Database Development", margin, y);
   y += 11;
   doc.setFont("times", "italic");
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
   doc.text("Lambton College, Canada", margin, y);
   doc.setFont("times", "normal");
-  const edu2 = "Jan 2018 – Dec 2020";
+  const edu2 = "2018 – 2020";
   doc.text(edu2, margin + contentWidth - doc.getTextWidth(edu2), y);
   y += 14;
 
@@ -319,7 +320,7 @@ export const generateResumePdf = () => {
   doc.setTextColor(71, 85, 105);
   doc.text("Charotar University of Science and Technology (CHARUSAT), India", margin, y);
   doc.setFont("times", "normal");
-  const edu3 = "Jul 2014 – Jun 2017";
+  const edu3 = "2014 – 2017";
   doc.text(edu3, margin + contentWidth - doc.getTextWidth(edu3), y);
   y += 18;
 
@@ -328,7 +329,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "normal");
   doc.setFontSize(9);
   doc.setTextColor(30, 41, 59);
-  doc.text("Google Data Analytics   |   Cyber Security Foundations   |   SQL Advanced Certificate", margin, y);
+  doc.text("Google Data Analytics (Coursera, May 2023)  |  CyberSecurity Foundations (LinkedIn, Nov 2023)  |  SQL Advanced (HackerRank, Oct 2023)", margin, y);
 
   // Trigger Download
   doc.save("Bharatkumar_Chandvani_Resume.pdf");

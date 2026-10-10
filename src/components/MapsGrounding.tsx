@@ -6,6 +6,25 @@ interface MapsGroundingProps {
   theme: ThemeMode;
 }
 
+
+const renderInline = (text: string): React.ReactNode[] =>
+  text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? <strong key={i}>{part.slice(2, -2)}</strong> : part
+  );
+
+const renderMarkdown = (text: string): React.ReactNode[] =>
+  text
+    .split("\n")
+    .filter((line) => line.trim() !== "")
+    .map((raw, i) => {
+      const line = raw.trim();
+      const heading = line.match(/^#{1,6}\s+(.*)$/);
+      if (heading) return <p key={i} className="font-bold pt-1">{renderInline(heading[1])}</p>;
+      const bullet = line.match(/^[-*•]\s+(.*)$/);
+      if (bullet) return <p key={i} className="pl-3">• {renderInline(bullet[1])}</p>;
+      return <p key={i}>{renderInline(line)}</p>;
+    });
+
 export const MapsGrounding: React.FC<MapsGroundingProps> = ({ theme }) => {
   const isDark = theme === "dark";
   const [selectedPrompt, setSelectedPrompt] = useState(
@@ -173,7 +192,7 @@ export const MapsGrounding: React.FC<MapsGroundingProps> = ({ theme }) => {
             </div>
             <span className="font-mono text-[10px] opacity-70">{modelUsed}</span>
           </div>
-          <div className="whitespace-pre-wrap pt-1">{groundedText}</div>
+          <div className="pt-1 space-y-1.5">{renderMarkdown(groundedText)}</div>
         </div>
       )}
     </div>

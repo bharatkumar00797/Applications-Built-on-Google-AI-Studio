@@ -57,14 +57,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 isDark ? "text-zinc-50" : "text-zinc-950"
               }`}
             >
-              Production Projects & Interactive Demos
+              Projects & Interactive Demos
             </h2>
             <p
               className={`text-xs sm:text-sm mt-1 max-w-2xl ${
                 isDark ? "text-zinc-400" : "text-zinc-600"
               }`}
             >
-              Featured AI systems, cloud architectures, and automated pipelines. Click "View Live Demo" on any project to inspect interactive dashboards, OCR workflows, and system topologies.
+              Featured AI systems, cloud architectures, and automated pipelines. Click "View Demo" on any project to inspect interactive dashboards, OCR workflows, and system topologies.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   <div className="flex items-center justify-between pb-2 border-b border-inherit text-[11px] font-mono opacity-80">
                     <span className="font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
                       <Activity className="w-3.5 h-3.5" />
-                      <span>{project.demoLabel || "Live Interactive Demo"}</span>
+                      <span>{project.demoLabel || "Interactive Demo"}</span>
                     </span>
                     <span className="flex items-center gap-1 group-hover:text-blue-500 transition-colors">
                       <Maximize2 className="w-3 h-3" />
@@ -155,7 +155,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     {project.id === "ai-newsletter-automation" && (
                       <div className="space-y-1.5 font-mono text-[11px]">
                         <div className="flex items-center justify-between text-zinc-400 text-[10px]">
-                          <span>Feed Ingestion: arXiv + HN (50 sources)</span>
+                          <span>Feed Ingestion: technical sources</span>
                           <span className="text-purple-400 font-bold">Gemini 3 Filter</span>
                         </div>
                         <div className="p-1.5 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 truncate">
@@ -168,10 +168,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       <div className="space-y-1.5 font-mono text-[11px]">
                         <div className="flex items-center justify-between text-zinc-400 text-[10px]">
                           <span>Optical Character Recognition Engine</span>
-                          <span className="text-emerald-400 font-bold">99.7% Accuracy</span>
+                          <span className="text-emerald-400 font-bold">OCR to Excel/Word</span>
                         </div>
                         <div className="text-[10px] text-zinc-500 flex justify-between">
-                          <span>Input: Scanned Financials</span>
+                          <span>Input: Scanned PDFs</span>
                           <span>Output: Structured Excel/JSON</span>
                         </div>
                       </div>
@@ -215,7 +215,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     ·
                   </span>
                   <span className="opacity-70 text-[11px]">
-                    Verified Engineering System
+                    GitHub Project
                   </span>
                 </div>
 
@@ -306,7 +306,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     className="inline-flex items-center gap-1.5 font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                   >
                     <Play className="w-3 h-3 fill-current" />
-                    <span>View Live Demo</span>
+                    <span>View Demo</span>
                   </button>
 
                   <a

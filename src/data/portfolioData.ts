@@ -5,7 +5,7 @@ export const PROFILE_INFO = {
   shortName: "Bharat Chandvani",
   title: "AI Engineer | Full Stack Developer | Technical Support Engineer",
   location: "Nadiad, Gujarat, India",
-  headline: "Building Autonomous AI Agents, Robust Full-Stack Systems & Production Architectures",
+  headline: "Building Autonomous AI Agents, Full-Stack Applications & Portfolio Projects",
   summary:
     "Full-stack developer (Python, .NET, SQL, WordPress) transitioning into AI engineering. Building AI agents and LLM-powered applications hands-on — from prompt design, tool-calling, and structured output to state persistence, evaluation harnesses, and deployment on Railway/Vercel. I care about the unglamorous parts most demos skip: stop conditions, failure logs, and eval scores. Shipping portfolio projects in public on GitHub and looking for a junior AI/ML engineering role where I can build real products and grow fast.",
   contact: {
@@ -21,24 +21,44 @@ export const PROFILE_INFO = {
 
 export const PROJECTS: ProjectItem[] = [
   {
+    id: "incident-commander-ai",
+    title: "Incident Commander AI (Simulated Environment Demo)",
+    tagline: "LLM agent that triages alerts and proposes approval-gated remediation, run against a simulated environment",
+    category: "AI Agents",
+    featured: true,
+    description:
+      "An LLM agent that triages alerts, correlates logs, metrics, and deploys, tests root-cause hypotheses with read-only diagnostics, proposes approval-gated runbook remediation, and drafts postmortems. It runs against a simulated environment for demonstration.",
+    achievements: [
+      "Triage and correlation of alerts, logs, metrics, and deploy history in a simulated environment.",
+      "Root-cause hypotheses tested only with read-only diagnostic tools.",
+      "Remediation steps require human approval; postmortem drafts are generated at the end of each run.",
+    ],
+    technologies: ["Python", "LLM Agents", "Tool Calling", "Testing", "CI"],
+    githubUrl: "https://github.com/bharatkumar00797/incident-commander-ai",
+    demoUrl: "#demo-agent-orchestrator",
+    demoLabel: "Demo Walkthrough",
+    mockupType: "agent-orchestrator",
+    architectureHighlights: "Bounded agent loop with read-only diagnostics, approval gates before any remediation, and a simulated environment in place of real infrastructure.",
+  },
+  {
     id: "agent-governance-dashboard",
     title: "Agent Inventory & Governance Dashboard",
-    tagline: "Enterprise telemetry dashboard tracking AI agent costs, latency anomalies, tool audits, and policy enforcement",
+    tagline: "Demo dashboard for cataloguing AI agents, with risk scoring, policies, and audit trails",
     category: "AI & Governance",
     featured: true,
     description:
-      "A centralized enterprise platform engineered to catalog, evaluate, and monitor autonomous AI agents. Provides real-time execution tracing, token expenditure analytics, P95 latency anomaly alerting, and strict RBAC governance rules preventing unapproved tool executions.",
+      "A demo platform for discovering, monitoring, and governing AI agents: an agent inventory, risk scoring, policies, and audit trails, with sample data.",
     achievements: [
-      "Engineered high-performance Next.js interface with real-time telemetry charts displaying agent health, token burn rates, and tool invocation audits.",
-      "Built asynchronous FastAPI backend connected to PostgreSQL schemas tracking multi-tenant agent registry and execution histories.",
-      "Implemented automated compliance guards flagging anomalous token surges and enforcing least-privilege tool access.",
+      "Next.js frontend showing the agent inventory, risk scores, and audit history, deployed on Vercel.",
+      "FastAPI backend with SQLAlchemy models for the agent registry and audit records, deployed on Railway.",
+      "Policy checks that flag agents breaking configured rules.",
     ],
-    technologies: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Tailwind CSS", "Python", "Telemetry"],
-    githubUrl: "https://github.com/bharatkumar00797",
+    technologies: ["Next.js", "FastAPI", "SQLAlchemy", "Tailwind CSS", "Python", "Vercel", "Railway"],
+    githubUrl: "https://github.com/bharatkumar00797/agent-governance-dashboard",
     demoUrl: "#demo-agent-governance",
-    demoLabel: "Live Interactive Dashboard",
+    demoLabel: "Dashboard Demo",
     mockupType: "governance-dashboard",
-    architectureHighlights: "Decoupled Next.js client with FastAPI asynchronous ingestion worker, PostgreSQL relational audit store, and real-time anomaly evaluation filters.",
+    architectureHighlights: "Next.js client on Vercel calling a FastAPI and SQLAlchemy backend on Railway.",
   },
   {
     id: "ai-newsletter-automation",
@@ -49,14 +69,14 @@ export const PROJECTS: ProjectItem[] = [
     description:
       "An automated content intelligence engine that ingests technical research feeds (arXiv, GitHub Trending, engineering blogs), deduplicates articles, extracts semantic breakthroughs with Gemini, formats responsive HTML templates, and dispatches scheduled newsletters.",
     achievements: [
-      "Built automated RSS feed ingestion and web scraping scrapers with BeautifulSoup, processing 50+ daily technical publications.",
-      "Designed deterministic multi-stage LLM prompt pipelines generating concise summaries, key code snippets, and editorial takeaways.",
-      "Automated scheduled cron delivery to multi-subscriber recipient lists with error retry backoff and bounce logging.",
+      "Gathers articles from technical feeds and pages as the workflow's input.",
+      "Multi-step LLM prompts produce short summaries and takeaways.",
+      "Formats the results as an HTML email and sends the digest.",
     ],
-    technologies: ["Python", "Gemini 3 SDK", "FastAPI", "BeautifulSoup", "Feedparser", "SMTP", "Cron"],
-    githubUrl: "https://github.com/bharatkumar00797",
+    technologies: ["Python", "LLM APIs", "Email", "Automation"],
+    githubUrl: "https://github.com/bharatkumar00797/newsletter-automation",
     demoUrl: "#demo-newsletter-pipeline",
-    demoLabel: "Live Pipeline Simulator",
+    demoLabel: "Pipeline Demo",
     mockupType: "newsletter-pipeline",
     architectureHighlights: "Multi-stage pipeline: Scheduled feed polling -> semantic relevance filtering -> Gemini summarization -> HTML template rendering -> batch email dispatch.",
   },
@@ -67,11 +87,11 @@ export const PROJECTS: ProjectItem[] = [
     category: "Python & Data",
     featured: true,
     description:
-      "Python scripts engineered to extract text and tabular data from scanned and native PDFs using OCR, convert financial and operational reports to Excel and Word, and compare data accuracy across multiple annual reports.",
+      "Python scripts that extract text and tables from scanned and native PDFs using OCR, and convert reports to Excel and Word.",
     achievements: [
       "Engineered automated OCR text processing pipelines converting unstructured scanned documents into clean structured data.",
       "Integrated report formatting modules generating standardized Word and Excel workbooks from extracted payloads.",
-      "Automated multi-year reconciliation checks to detect variances and data discrepancies across annual records.",
+      "Scripts to compare extracted values across reports.",
     ],
     technologies: ["Python", "OCR", "PyPDF2", "Pandas", "OpenPyXL", "Data Processing"],
     githubUrl: "https://github.com/bharatkumar00797/pdf-data-extraction-ocr",
@@ -136,7 +156,7 @@ export const PROJECTS: ProjectItem[] = [
     technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "GitHub Pages"],
     githubUrl: "https://github.com/bharatkumar00797/bharatkumar00797.github.io",
     demoUrl: "https://bharatkumar00797.github.io",
-    demoLabel: "Live GitHub Pages Site",
+    demoLabel: "GitHub Pages Site",
     mockupType: "portfolio-browser",
     architectureHighlights: "Semantic HTML5 markup with zero-dependency vanilla JavaScript event handling and responsive styling.",
   },
@@ -162,7 +182,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "agentic-workflow-engine",
-    title: "Autonomous Agent Tool-Calling Orchestrator (In Progress)",
+    title: "Agent Tool-Calling Prototype (In Progress)",
     tagline: "Experimental prototype exploring multi-turn reasoning and dynamic tool execution",
     category: "AI Roadmap",
     featured: false,
@@ -174,7 +194,7 @@ export const PROJECTS: ProjectItem[] = [
       "Active development repository tracking progress on GitHub.",
     ],
     technologies: ["Gemini 3 SDK", "Python", "TypeScript", "Node.js", "Express", "Agentic Workflows"],
-    githubUrl: "https://github.com/bharatkumar00797",
+    githubUrl: "https://github.com/bharatkumar00797?tab=repositories",
     demoUrl: "#demo-agent-orchestrator",
     demoLabel: "Interactive Tool Calling Trace",
     mockupType: "agent-orchestrator",
@@ -185,14 +205,15 @@ export const PROJECTS: ProjectItem[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "ai-engineer-self-directed",
-    role: "AI Engineer — Self-directed Learning & Portfolio Projects",
+    role: "AI Engineer (Self-directed)",
     company: "Personal Projects – AI Agents",
     period: "September 2026 – Present",
     location: "Nadiad, Gujarat, India",
     type: "AI & Full-Stack Engineering",
     bullets: [
-      "Building AI agents with LLM tool-calling, structured prompting, and state persistence — designing stop conditions, failure logging, and crash-recovery patterns for reliable autonomous runs.",
-      "Shipping projects in public on GitHub with proper READMEs: problem statement, architecture, demo GIFs, and reproducible setup.",
+      "Released four AI agent projects at v1.0.0 on GitHub, each with automated tests and CI.",
+      "Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).",
+      "Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.",
     ],
     technologies: ["Python", "AI Agents", "LLM Tool Calling", "Pydantic", "Railway.app", "Vercel", "RAG"],
   },
@@ -246,12 +267,12 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: "July 2020 – March 2024",
     duration: "3 years 9 months",
     location: "Toronto, ON, Canada (Remote)",
-    type: "Compliance & Identity Verification",
+    type: "Freelance · Identity Verification",
     bullets: [
-      "Reviewed and verified user-submitted identity documents against KYC requirements; flagged suspicious applications to prevent fraud.",
+      "Reviewed and verified user-submitted identity documents against KYC requirements; flagged applications that needed further review.",
       "Maintained accurate verification records and guided users through the KYC process; reported recurring issues to the review team.",
     ],
-    technologies: ["KYC Compliance", "Identity Verification", "Fraud Prevention", "Audit Records"],
+    technologies: ["KYC Compliance", "Identity Verification", "Document Review", "Record Keeping"],
   },
   {
     id: "loyalist-coord",
@@ -271,24 +292,24 @@ export const EXPERIENCES: ExperienceItem[] = [
 
 export const EDUCATIONS: EducationItem[] = [
   {
-    degree: "Ontario College Graduate Certificate — Project Management",
+    degree: "Graduate Certificate in Project Management",
     institution: "Loyalist College, Canada",
     location: "Belleville, ON, Canada",
-    period: "September 2021 – June 2022",
+    period: "2021 – 2022",
     focus: "Project governance, agile methodologies, risk mitigation, and cross-functional team delivery.",
   },
   {
-    degree: "Ontario College Graduate Certificate — Computer Software & Database Development",
+    degree: "Graduate Certificate in Software & Database Development",
     institution: "Lambton College, Canada",
     location: "Toronto / Sarnia, ON, Canada",
-    period: "January 2018 – December 2020",
-    focus: "Relational database design, enterprise software development, web applications, and data modeling.",
+    period: "2018 – 2020",
+    focus: "Relational database design, software development, web applications, and data modeling.",
   },
   {
     degree: "Bachelor of Computer Applications (BCA)",
     institution: "Charotar University of Science and Technology (CHARUSAT), India",
     location: "Changa, Gujarat, India",
-    period: "July 2014 – June 2017",
+    period: "2014 – 2017",
     focus: "Core computer science, data structures, algorithms, object-oriented programming, and SQL.",
   },
 ];
@@ -296,20 +317,20 @@ export const EDUCATIONS: EducationItem[] = [
 export const CERTIFICATIONS: CertificationItem[] = [
   {
     name: "Google Data Analytics",
-    issuer: "Google",
-    year: "Verified",
+    issuer: "Coursera",
+    year: "May 2023",
     highlight: "Data analysis workflows, SQL data exploration, spreadsheets, and data visualization.",
   },
   {
-    name: "Cyber Security Foundations",
-    issuer: "Industry Accredited Security Institute",
-    year: "Verified",
+    name: "CyberSecurity Foundations",
+    issuer: "LinkedIn",
+    year: "Nov 2023",
     highlight: "Network security fundamentals, identity access governance, and threat mitigation.",
   },
   {
-    name: "SQL Advanced Certificate",
-    issuer: "HackerRank / Industry Professional",
-    year: "Verified",
+    name: "SQL (Advanced)",
+    issuer: "HackerRank",
+    year: "Oct 2023",
     highlight: "Complex joins, window functions, CTEs, indexing, and query performance optimization.",
   },
 ];
@@ -329,11 +350,11 @@ export const SKILL_CATEGORIES = [
   },
   {
     category: "Deployment & Operations",
-    skills: ["Railway.app", "Vercel V0", "Git / GitHub Version Control", "Technical Support & Troubleshooting", "Ticket Lifecycle Management", "WordPress Custom Dev & SEO"],
+    skills: ["Railway.app", "v0", "Git / GitHub Version Control", "Technical Support & Troubleshooting", "Ticket Lifecycle Management", "WordPress Custom Dev & SEO"],
   },
   {
     category: "Compliance & Governance",
-    skills: ["KYC / AML Document Verification", "Fraud Pattern Identification", "Agile & Project Management (Loyalist)", "Cross-Functional Collaboration", "Technical Documentation"],
+    skills: ["KYC / AML Document Verification", "Identity Document Review", "Agile & Project Management (Loyalist)", "Cross-Functional Collaboration", "Technical Documentation"],
   },
 ];
 
@@ -342,19 +363,19 @@ export const AUDIO_SCRIPTS = [
     id: "elevator-pitch",
     title: "Executive Introduction & Bio",
     duration: "45 sec",
-    text: "Hello! I am Bharatkumar Chandvani, an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. With a solid foundation in Python, .NET, SQL, and project management, I have transitioned into hands-on AI engineering. I build autonomous agents, structured tool-calling pipelines, and production web applications deployed on Railway and Vercel. I am currently seeking junior AI/ML or full-stack engineering roles where I can ship real products and make an immediate impact.",
+    text: "Hello! I am Bharatkumar Chandvani, an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. With a solid foundation in Python, .NET, SQL, and project management, I have transitioned into hands-on AI engineering. I build autonomous agents, structured tool-calling pipelines, and web applications deployed on Railway and Vercel. I am currently seeking junior AI/ML or full-stack engineering roles where I can ship real products and make an immediate impact.",
   },
   {
     id: "ai-transition",
     title: "Transition to AI Engineering",
     duration: "55 sec",
-    text: "My path into AI engineering is grounded in real-world systems. Having built enterprise applications in C# and managed technical reporting platforms at scale, I understand that generative AI is most powerful when combined with rigorous software engineering. I focus on deterministic schema enforcement, multi-turn state persistence, and grounding LLMs with real APIs and database tools rather than treating AI like a novelty. I am shipping all my work openly on GitHub.",
+    text: "My path into AI engineering is grounded in real-world systems. Having built applications in C# and supported reporting systems in operations roles, I understand that generative AI is most powerful when combined with rigorous software engineering. I focus on deterministic schema enforcement, multi-turn state persistence, and grounding LLMs with real APIs and database tools rather than treating AI like a novelty. I am shipping all my work openly on GitHub.",
   },
   {
     id: "kyc-compliance",
-    title: "KYC & Fraud Prevention Experience",
+    title: "KYC Validation Experience",
     duration: "40 sec",
-    text: "For nearly four years at Pi Network, I worked as a KYC Validator verifying user credentials against strict regulatory compliance standards. This experience gave me a deep understanding of document integrity, visual tampering, and security edge cases — insights I now bring into multimodal AI vision pipelines and identity automation.",
+    text: "For nearly four years at Pi Network, I worked as a freelance KYC Validator, reviewing identity documents against KYC requirements. This experience gave me a deep understanding of document integrity, visual tampering, and security edge cases — insights I now bring into multimodal AI vision pipelines and identity automation.",
   },
 ];
 
@@ -392,7 +413,7 @@ const createSampleSvg = (title: string, subtitle: string, color: string) => {
     <rect x="80" y="170" width="180" height="100" fill="#27272a" rx="8" stroke="#3f3f46"/>
     <text x="100" y="210" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Client Request</text>
     <text x="100" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Vite React SPA</text>
-    <path d="M 260 220 L 320 220" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 260 220 L 320 220" stroke="#38bdf8" stroke-width="2"/>
     <rect x="320" y="170" width="180" height="100" fill="#27272a" rx="8" stroke="#38bdf8"/>
     <text x="340" y="210" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Express Server</text>
     <text x="340" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Node.js Proxy</text>
@@ -402,9 +423,9 @@ const createSampleSvg = (title: string, subtitle: string, color: string) => {
     <text x="580" y="235" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Pro / Flash / TTS</text>
     <rect x="80" y="300" width="640" height="100" fill="#18181b" rx="8" stroke="#3f3f46"/>
     <text x="100" y="335" fill="#e2e8f0" font-family="monospace" font-size="13">// Architectural Principle: Never expose Gemini secrets to client</text>
-    <text x="100" y="360" fill="#e2e8f0" font-family="monospace" font-size="13">POST /api/chat -&gt; server validation -&gt; ai.models.generateContent</text>
+    <text x="100" y="360" fill="#e2e8f0" font-family="monospace" font-size="13">POST /api/chat, server validation, ai.models.generateContent</text>
   </svg>`;
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 };
 
 export const IMAGE_PRESETS: ImageAnalysisPreset[] = [
@@ -417,7 +438,7 @@ export const IMAGE_PRESETS: ImageAnalysisPreset[] = [
   },
   {
     id: "kyc-flow",
-    title: "KYC Verification & Fraud Detection Flow",
+    title: "KYC Document Verification Flow",
     description: "Two-stage heuristic and multimodal pipeline for ID document compliance.",
     svgDataUrl: createSampleSvg("Document Verification & Compliance Pipeline", "Biometric and credential verification against regulatory standards", "#10b981"),
     prompt: "Review this document verification workflow from a security, latency, and compliance standpoint. How does multimodal AI complement deterministic validation rules?",

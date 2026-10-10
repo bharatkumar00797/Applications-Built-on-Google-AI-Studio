@@ -148,7 +148,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const signInGuest = () => {
-    // Verified local guest session that avoids Firebase admin-restricted-operation errors
+    // Local guest session that avoids Firebase admin-restricted-operation errors
     const guest: GuestProfile = {
       uid: "guest-" + Date.now().toString(36),
       displayName: "Guest Reviewer",

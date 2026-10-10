@@ -14,7 +14,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({ theme }) => {
     { text: "GEMINI 3.8 & PRO PREVIEW", icon: Sparkles },
     { text: ".NET 8 WEB APIS & C#", icon: Terminal },
     { text: "PYTHON LLM PIPELINES", icon: Cpu },
-    { text: "KYC & FRAUD DETECTION", icon: ShieldCheck },
+    { text: "KYC VALIDATION", icon: ShieldCheck },
     { text: "SQL OPTIMIZATION & SCHEMAS", icon: Database },
     { text: "RAILWAY & VERCEL DEPLOYMENT", icon: ArrowUpRight },
     { text: "FULL-STACK ARCHITECTURE", icon: Terminal },

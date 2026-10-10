@@ -47,7 +47,7 @@ export interface ProjectItem {
   liveUrl?: string;
   featured: boolean;
   architectureHighlights: string;
-  mockupType?: "governance-dashboard" | "newsletter-pipeline" | "ocr-scanner" | "aws-cloud" | "portfolio-browser" | "python-cli" | "agent-orchestrator";
+  mockupType?: "incident-commander" | "governance-dashboard" | "newsletter-pipeline" | "ocr-scanner" | "aws-cloud" | "portfolio-browser" | "python-cli" | "agent-orchestrator";
   demoUrl?: string;
   demoLabel?: string;
 }

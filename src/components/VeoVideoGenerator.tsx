@@ -29,7 +29,9 @@ const rasterizeSourceToPng = (
 ): Promise<string> => {
   return new Promise((resolve) => {
     const img = new Image();
-    img.crossOrigin = "anonymous";
+    if (!sourceUrlOrSvg.startsWith("data:")) {
+      img.crossOrigin = "anonymous";
+    }
     img.onload = () => {
       const targetWidth = targetRatio === "16:9" ? 1280 : 720;
       const targetHeight = targetRatio === "16:9" ? 720 : 1280;
@@ -75,7 +77,9 @@ const synthesizeCinematicVideo = (
 ): Promise<string> => {
   return new Promise((resolve) => {
     const img = new Image();
-    img.crossOrigin = "anonymous";
+    if (!imageUrl.startsWith("data:")) {
+      img.crossOrigin = "anonymous";
+    }
     img.onload = () => {
       const width = ratio === "16:9" ? 960 : 540;
       const height = ratio === "16:9" ? 540 : 960;

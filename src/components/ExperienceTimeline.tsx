@@ -30,7 +30,7 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ theme })
               isDark ? "text-zinc-400" : "text-zinc-600"
             }`}
           >
-            Verified history spanning software development (.NET, C#, Python), technical support operations, compliance verification (KYC), and production AI engineering.
+            Experience across software development (.NET, C#, Python), technical support and operations, KYC validation, and self-directed AI engineering.
           </p>
         </div>
 

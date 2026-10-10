@@ -26,7 +26,7 @@ const ai = new GoogleGenAI({
   },
 });
 
-// Verified Resume Data for Bharatkumar Chandvani
+// Resume Data for Bharatkumar Chandvani
 const RESUME_DATA = {
   fullName: "Bharatkumar Chandvani",
   preferredName: "Bharat Chandvani",
@@ -47,58 +47,56 @@ const RESUME_DATA = {
     "Python & Modern LLM Frameworks",
     ".NET / C# & Web APIs",
     "SQL, Schema Design & Optimization",
-    "Railway.app & Vercel V0 Deployment",
+    "Railway.app & v0 Deployment",
     "WordPress Custom Development & SEO",
     "Technical Support & Escalation Management",
   ],
   certifications: [
     {
       name: "CyberSecurity Foundations",
-      issuer: "Industry Accredited",
-      year: "2024",
+      issuer: "LinkedIn",
+      year: "Nov 2023",
       highlight: "Network security, access controls, vulnerability mitigation",
     },
     {
-      name: "SQL Advanced Certificate",
-      issuer: "Database Professional Institute",
-      year: "2023",
+      name: "SQL (Advanced)",
+      issuer: "HackerRank",
+      year: "Oct 2023",
       highlight: "Complex queries, window functions, query plan optimization",
     },
     {
-      name: "Google Data Analytics Professional",
-      issuer: "Google",
-      year: "2023",
+      name: "Google Data Analytics",
+      issuer: "Coursera",
+      year: "May 2023",
       highlight: "Data cleaning, statistical synthesis, dynamic reporting dashboards",
     },
   ],
   experience: [
     {
       id: "ai-engineer",
-      role: "AI Engineer (Self-directed learning & portfolio projects)",
+      role: "AI Engineer (Self-directed)",
       company: "Personal Projects – AI Agents",
       period: "September 2026 - Present",
       location: "Nadiad, Gujarat, India",
       type: "AI & Full-Stack Engineering",
       bullets: [
-        "Architecting production-ready AI agents featuring multi-turn conversation state, tool calling, and multimodal perception.",
-        "Developing structured prompt pipelines with deterministic JSON schema enforcement and dynamic context injection.",
-        "Deploying web apps and serverless backend proxies seamlessly via Railway.app and Vercel V0.",
-        "Open-sourcing reproducible AI agent patterns and developer utilities on GitHub (github.com/bharatkumar00797).",
+        "Released four AI agent projects at v1.0.0 on GitHub, each with automated tests and CI.",
+        "Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).",
+        "Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.",
       ],
       technologies: ["Gemini 3 Series", "Python", "TypeScript", "Node.js", "Express", "Vercel", "Railway"],
     },
     {
       id: "tanmay-travels",
-      role: "Relationship Manager & Technical Operations",
+      role: "Relationship Manager (Technical Operations & Reporting)",
       company: "Tanmay Travels",
       period: "November 2024 - August 2026",
       duration: "1 year 10 months",
       location: "Nadiad, Gujarat, India",
       type: "Technical Support & Operations",
       bullets: [
-        "Installed, configured, and updated critical operational reporting systems to streamline passenger logistics and dispatch.",
-        "Resolved complex user complaints and provided permanent root-cause solutions to internally raised technical tickets.",
-        "Ensured smooth day-to-day operations with high system availability and punctually generated performance analytics.",
+        "Installed, configured, and updated reporting systems; resolved user complaints and provided solutions to internally raised tickets.",
+        "Ensured smooth day-to-day technical operations with timely and accurate reporting.",
       ],
       technologies: ["Reporting Systems", "Ticket Management", "Workflow Automation", "Data Reconciliation"],
     },
@@ -111,10 +109,9 @@ const RESUME_DATA = {
       location: "Barrie, ON, Canada",
       type: "Web Development & SEO",
       bullets: [
-        "Customized and modified bespoke WordPress themes, PHP templates, and plugins to enhance online booking conversions.",
-        "Conducted regular maintenance, security hardening, automated backups, and page speed performance optimizations.",
-        "Managed content publishing, streamlined Yoast SEO for local organic search rankings, and monitored Google Analytics KPIs.",
-        "Troubleshot and resolved technical issues promptly, minimizing downtime and maintaining 99.9% site reliability.",
+        "Customized and modified WordPress themes and plugins to enhance site functionality, performance, and user experience.",
+        "Implemented responsive, mobile-first design; conducted security, backup, and performance maintenance.",
+        "Improved search visibility through SEO (Yoast) and content optimization; delivered Google Analytics performance reports to the client.",
       ],
       technologies: ["WordPress", "PHP", "JavaScript", "Yoast SEO", "Google Analytics", "MySQL"],
     },
@@ -140,13 +137,12 @@ const RESUME_DATA = {
       period: "July 2020 - March 2024",
       duration: "3 years 9 months",
       location: "Toronto, ON, Canada",
-      type: "Compliance & Identity Verification",
+      type: "Freelance · Identity Verification",
       bullets: [
-        "Reviewed and rigorously verified identity documents and biometrics to ensure regulatory KYC and AML compliance.",
-        "Maintained high precision in distinguishing forged documents, image tampering, and mismatched credentials.",
-        "Monitored and analyzed verification trends, suggesting process improvements to enhance validator throughput.",
+        "Reviewed and verified user-submitted identity documents against KYC requirements; flagged applications that needed further review.",
+        "Maintained accurate verification records and guided users through the KYC process; reported recurring issues to the review team.",
       ],
-      technologies: ["KYC/AML Protocols", "Document Analysis", "Data Verification", "Fraud Detection"],
+      technologies: ["KYC Compliance", "Document Review", "Data Verification"],
     },
     {
       id: "ression",
@@ -158,7 +154,7 @@ const RESUME_DATA = {
       type: "Software Engineering",
       bullets: [
         "Collaborated with senior engineers to design, build, and maintain software applications using C#, .NET, and Xamarin.",
-        "Authored clean, maintainable, well-documented code adhering to enterprise object-oriented standards.",
+        "Authored clean, maintainable, well-documented code following object-oriented standards.",
         "Identified, reproduced, and patched software bugs through rigorous debugging and unit testing.",
         "Utilized Git for branching and version control; drafted architecture documentation and API specifications.",
       ],
@@ -182,24 +178,24 @@ const RESUME_DATA = {
   ],
   education: [
     {
-      degree: "Ontario College Graduate Certificate, Project Management",
+      degree: "Graduate Certificate in Project Management",
       institution: "Loyalist College",
       location: "Belleville, ON, Canada",
-      period: "September 2021 - June 2022",
+      period: "2021 - 2022",
       focus: "Agile methodologies, project lifecycles, risk management, stakeholder communication.",
     },
     {
-      degree: "Ontario College Graduate Certificate, Computer Software & Database Development",
+      degree: "Graduate Certificate in Software & Database Development",
       institution: "Lambton College",
       location: "Toronto / Sarnia, ON, Canada",
-      period: "January 2018 - December 2020",
-      focus: "Relational database design, enterprise software engineering (.NET, Java), web application development.",
+      period: "2018 - 2020",
+      focus: "Relational database design, software engineering (.NET, Java), web application development.",
     },
     {
       degree: "Bachelor's in Computer Application (BCA)",
       institution: "CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY (CHARUSAT)",
       location: "Changa, Gujarat, India",
-      period: "July 2014 - June 2017",
+      period: "2014 - 2017",
       focus: "Core computer science fundamentals, data structures, algorithms, object-oriented programming, relational databases.",
     },
   ],
@@ -232,7 +228,7 @@ app.post("/api/chat", async (req, res) => {
       chosenModel = "gemini-3.5-flash";
     }
 
-    const systemInstruction = `You are Bharatkumar Chandvani's official Portfolio AI Agent and Technical Career Representative.
+    const systemInstruction = `You are the Career Assistant on Bharatkumar Chandvani's portfolio.
 Your role: Represent Bharatkumar (Bharat) Chandvani with accurate, professional, articulate, and honest facts based strictly on his actual resume and technical portfolio:
 
 Profile Summary:
@@ -245,19 +241,20 @@ Profile Summary:
 - Transition Story: Full-stack developer with solid foundations in Python, .NET (C#), SQL, and WordPress, actively transitioning into hands-on AI engineering. Builds autonomous AI agents, tool-calling pipelines, prompt architectures, and multimodal systems deployed on Railway and Vercel.
 
 Work Experience:
-1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Ships production-grade LLM applications, agentic workflows, function-calling patterns, and prompt engineering architectures.
+1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project is not deployed live.
 2. Tanmay Travels (Relationship Manager & Technical Operations, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
 3. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
 4. CRAIG SPODAK (Freelance Graphic Designer, June 2024): Produced modern branding vector and layout assets using Adobe Creative Suite.
-5. Pi Network (KYC Validator, July 2020 - Mar 2024): 3+ years reviewing identity documents, fraud prevention, compliance validation.
+5. Pi Network (KYC Validator, freelance, July 2020 - Mar 2024): reviewed user identity documents against KYC requirements.
 6. Ression (Junior Web Developer, May 2022 - Dec 2022): C#, .NET, Xamarin, SQL, REST APIs, Git, unit testing.
 7. Loyalist College (Project Coordinator, Jan 2022 - Apr 2022): Excel dashboards, GIS evaluation (ArcGIS vs QGIS).
 
 Education & Certifications:
-- Loyalist College: Ontario College Graduate Certificate in Project Management (2021-2022)
-- Lambton College: Ontario College Graduate Certificate in Computer Software & Database Development (2018-2020)
+- Loyalist College: Graduate Certificate in Project Management (2021-2022)
+- Lambton College: Graduate Certificate in Software & Database Development (2018-2020)
 - Charotar University of Science and Technology: Bachelor of Computer Application (BCA, 2014-2017)
-- Certifications: Cybersecurity Foundations, SQL Advanced Certificate, Google Data Analytics Professional Certificate
+- Certifications: CyberSecurity Foundations (LinkedIn, Nov 2023), SQL (Advanced) (HackerRank, Oct 2023), Google Data Analytics (Coursera, May 2023)
+- Never describe portfolio demos as production or enterprise systems, and do not quote uptime or accuracy figures.
 
 Tone & Guidelines:
 - Professional, technical, humble yet confident, and authentic.
@@ -310,8 +307,8 @@ Tone & Guidelines:
           return res.json({
             role: "model",
             content:
-              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He specializes in Python OCR data extraction pipelines, AWS Serverless cloud architectures (Lambda, API Gateway, DynamoDB), C# / .NET 8 backends, and has 3.7+ years of KYC fraud verification experience at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
-            modelUsed: "Grounded Career Co-Pilot (Adaptive Mode)",
+              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He builds AI agent projects in Python, has worked with AWS Serverless, C# and .NET, and spent nearly four years as a freelance KYC Validator at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
+            modelUsed: "Career Assistant (offline answer)",
           });
         }
       }
@@ -328,8 +325,8 @@ Tone & Guidelines:
     res.json({
       role: "model",
       content:
-        "Bharatkumar is a software developer with experience in Python automation, AWS cloud services, .NET APIs, and KYC fraud verification. Feel free to explore his open-source repositories on GitHub at github.com/bharatkumar00797.",
-      modelUsed: "Portfolio Assistant",
+        "Bharatkumar is a software developer with experience in Python automation, AWS cloud services, .NET APIs, and KYC validation. Feel free to explore his open-source repositories on GitHub at github.com/bharatkumar00797.",
+      modelUsed: "Career Assistant",
     });
   }
 });

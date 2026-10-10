@@ -155,10 +155,10 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                       <div className="w-3 h-3 rounded-full bg-rose-500" />
                       <div className="w-3 h-3 rounded-full bg-amber-500" />
                       <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                      <span className="text-zinc-400 text-[11px] ml-2">agent-governance.enterprise.internal</span>
+                      <span className="text-zinc-400 text-[11px] ml-2">agent-governance-dashboard (demo)</span>
                     </div>
                     <span className="px-2 py-0.5 rounded text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800">
-                      LIVE FLEET: HEALTHY
+                      SAMPLE DATA
                     </span>
                   </div>
 
@@ -244,7 +244,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                     <div className="p-3 rounded bg-zinc-950/80 border border-zinc-800">
                       <div className="text-[10px] text-zinc-400 font-bold">STEP 3: DISPATCH</div>
                       <div className="text-xs text-emerald-400 mt-1">HTML Digest Dispatched</div>
-                      <div className="text-[10px] text-zinc-500">100% Deliverability (0 bounces)</div>
+                      <div className="text-[10px] text-zinc-500">Sample digest preview</div>
                     </div>
                   </div>
 
@@ -270,7 +270,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                   <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
                     <span className="text-zinc-300 font-bold">OCR DATA EXTRACTION & VERIFICATION PIPELINE</span>
                     <span className="px-2 py-0.5 rounded text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800">
-                      ACCURACY: 99.7%
+                      SAMPLE OUTPUT
                     </span>
                   </div>
 
@@ -287,7 +287,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                       <div className="text-[10px] font-bold text-zinc-400">OUTPUT: STRUCTURED EXCEL / JSON</div>
                       <div className="p-2.5 rounded bg-zinc-900 text-[10px] text-emerald-400 font-mono space-y-1">
                         <div>{`{ "q4_revenue": "$4,250,000", "delta": "+14.2%",`}</div>
-                        <div>{`  "operating_margin": "28.4%", "verified": true }`}</div>
+                        <div>{`  "operating_margin": "28.4%", "source": "sample" }`}</div>
                         <div className="text-zinc-400 text-[9px] pt-1">Exported: /output/financials_extracted.xlsx</div>
                       </div>
                     </div>
@@ -304,7 +304,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                   <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
                     <span className="text-zinc-300 font-bold">AWS SERVERLESS APPLICATION TOPOLOGY</span>
                     <span className="px-2 py-0.5 rounded text-[10px] bg-sky-950 text-sky-300 border border-sky-800">
-                      US-EAST-1 · PRODUCTION
+                      ARCHITECTURE DIAGRAM
                     </span>
                   </div>
                   <div className="p-4 rounded bg-zinc-950 border border-zinc-800 flex flex-wrap items-center justify-between gap-3 text-center">
@@ -370,7 +370,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
 
               <div className="space-y-2">
                 <div className="text-xs font-bold uppercase tracking-wider opacity-70">
-                  Key Deliverables & Verified Outcomes
+                  Key Features
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                   {project.achievements.map((ach, idx) => (
@@ -426,7 +426,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
         {/* Footer Actions */}
         <div className="p-4 sm:p-5 border-t border-inherit flex flex-wrap items-center justify-between gap-3 bg-zinc-500/5">
           <div className="text-xs opacity-70 font-mono">
-            {project.category} · Verified GitHub Repository
+            {project.category} · GitHub Repository
           </div>
 
           <div className="flex items-center gap-2.5">

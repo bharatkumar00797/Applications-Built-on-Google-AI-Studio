@@ -117,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({
                 isDark ? "text-zinc-400" : "text-zinc-700"
               }`}
             >
-              Full-stack developer building production software across Python, Next.js, FastAPI, PostgreSQL, and AWS Serverless (Lambda, DynamoDB). Currently engineering AI agent governance telemetry dashboards, automated research newsletter pipelines, and robust OCR extraction workflows. Backed by 3.7+ years in KYC fraud verification at Pi Network, enterprise reporting systems experience, and post-graduate project management credentials from Loyalist College (Canada).
+              Full-stack developer (Python, .NET, SQL, WordPress) moving into AI engineering. I build AI agent projects in public on GitHub, including an incident-response agent demo, an agent governance dashboard (Next.js, FastAPI, SQLAlchemy), and a newsletter automation workflow. Background includes nearly four years as a freelance KYC Validator at Pi Network, technical operations and reporting work, and a Graduate Certificate in Project Management from Loyalist College (Canada).
             </p>
 
             {/* Primary Action Buttons */}
@@ -176,7 +176,7 @@ export const Hero: React.FC<HeroProps> = ({
               </button>
             </div>
 
-            {/* Verified Contact Details with Direct Clickable Links + Copy Badges */}
+            {/* Contact Details with Direct Clickable Links + Copy Badges */}
             <div
               className={`pt-5 border-t flex flex-wrap items-center gap-y-3 gap-x-6 text-xs ${
                 isDark ? "border-zinc-800 text-zinc-400" : "border-zinc-300 text-zinc-700"
@@ -278,7 +278,7 @@ export const Hero: React.FC<HeroProps> = ({
                   Candidate Snapshot
                 </div>
                 <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                  Ready to Deploy
+                  Open to Work
                 </span>
               </div>
 
@@ -293,21 +293,21 @@ export const Hero: React.FC<HeroProps> = ({
                 <div>
                   <div className="text-[10px] uppercase font-bold text-zinc-500">Key Projects</div>
                   <div className="font-medium mt-0.5 leading-snug">
-                    Agent Governance Dashboard, AI Newsletter Pipeline, OCR Extraction, AWS Serverless
+                    Incident Commander AI (demo), Agent Governance Dashboard, Newsletter Automation, OCR Extraction
                   </div>
                 </div>
 
                 <div>
                   <div className="text-[10px] uppercase font-bold text-zinc-500">Domain Background</div>
                   <div className="font-medium mt-0.5 leading-snug">
-                    3.7+ Years KYC Identity Fraud Verification · Logistics Operations · Project Management
+                    KYC Validation (Freelance) · Technical Operations · Project Management
                   </div>
                 </div>
 
                 <div>
                   <div className="text-[10px] uppercase font-bold text-zinc-500">Education</div>
                   <div className="font-medium mt-0.5 leading-snug">
-                    PG Project Management (Toronto, Canada) · B.E. Mechanical Engineering
+                    Graduate Certificates, Loyalist & Lambton College (Canada) · BCA, CHARUSAT
                   </div>
                 </div>
               </div>

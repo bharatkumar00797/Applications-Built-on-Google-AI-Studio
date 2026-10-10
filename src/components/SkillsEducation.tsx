@@ -31,7 +31,7 @@ export const SkillsEducation: React.FC<SkillsEducationProps> = ({ theme }) => {
                 isDark ? "text-zinc-400" : "text-zinc-600"
               }`}
             >
-              Grounded across modern generative AI agents, enterprise backend architectures (.NET / Python), relational database optimization, and compliance protocols.
+              Grounded across modern generative AI agents, backend development (.NET / Python), relational database optimization, and compliance protocols.
             </p>
           </div>
 

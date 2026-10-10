@@ -187,7 +187,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
               </h2>
               <div className="flex items-center gap-1.5 text-[11px] opacity-75">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                <span>Verified technical context</span>
+                <span>Grounded in resume data</span>
               </div>
             </div>
           </div>

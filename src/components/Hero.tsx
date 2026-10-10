@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ThemeMode } from "../types";
 import { PROFILE_INFO } from "../data/portfolioData";
+import { generateResumePdf } from "../utils/generateResumePdf";
 import {
   Github,
   Linkedin,
@@ -9,32 +10,29 @@ import {
   Check,
   Copy,
   Bot,
-  Volume2,
-  Film,
-  Compass,
-  ArrowRight,
-  ShieldCheck,
-  Code2,
+  FileDown,
   Sparkles,
+  ArrowRight,
+  ExternalLink,
+  Code2,
 } from "lucide-react";
 
 interface HeroProps {
   theme: ThemeMode;
   onOpenChat: () => void;
-  onScrollToAudio: () => void;
-  onScrollToVeo: () => void;
-  onScrollToMaps: () => void;
+  onScrollToProjects: () => void;
+  onScrollToAILab: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   theme,
   onOpenChat,
-  onScrollToAudio,
-  onScrollToVeo,
-  onScrollToMaps,
+  onScrollToProjects,
+  onScrollToAILab,
 }) => {
   const isDark = theme === "dark";
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [copiedToast, setCopiedToast] = useState<string | null>(null);
   const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
@@ -55,16 +53,20 @@ export const Hero: React.FC<HeroProps> = ({
     return () => clearInterval(interval);
   }, []);
 
-  const copyToClipboard = (text: string, key: string) => {
+  const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(null), 2000);
+    setCopiedKey(label);
+    setCopiedToast(`Copied ${label}: ${text}`);
+    setTimeout(() => {
+      setCopiedKey(null);
+      setCopiedToast(null);
+    }, 2800);
   };
 
   return (
     <section
       id="overview"
-      className="relative overflow-hidden py-14 md:py-24 border-b transition-colors border-inherit"
+      className="relative overflow-hidden py-14 md:py-22 border-b transition-colors border-inherit"
     >
       {/* Subtle atmospheric ambient glow */}
       <div
@@ -80,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="flex flex-wrap items-center gap-3 text-xs font-medium">
               <span className="inline-flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold tracking-wide">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                <span>OPEN TO JUNIOR AI/ML & FULL-STACK ROLES</span>
+                <span>OPEN TO FULL-STACK & JUNIOR AI/ML ROLES</span>
               </span>
               <span className="opacity-40" aria-hidden="true">
                 ·
@@ -104,8 +106,8 @@ export const Hero: React.FC<HeroProps> = ({
                   isDark ? "text-zinc-200" : "text-zinc-800"
                 }`}
               >
-                Transitioning into AI engineering with real production systems —
-                from Python OCR data extraction and AWS cloud architectures to .NET backends.
+                Full-Stack Developer & AI Systems Builder —
+                Next.js, FastAPI, Python OCR pipelines, and AWS Serverless architectures.
               </p>
             </div>
 
@@ -115,70 +117,122 @@ export const Hero: React.FC<HeroProps> = ({
                 isDark ? "text-zinc-400" : "text-zinc-700"
               }`}
             >
-              Full-stack and cloud developer (Python, AWS Serverless, .NET, SQL, WordPress) transitioning into AI engineering. Experienced in building automated OCR document extraction pipelines, AWS Lambda microservices, enterprise reporting systems, and 3.7+ years of rigorous KYC fraud verification at Pi Network. I combine post-graduate project management credentials with practical software engineering to ship scalable, reliable products.
+              Full-stack developer building production software across Python, Next.js, FastAPI, PostgreSQL, and AWS Serverless (Lambda, DynamoDB). Currently engineering AI agent governance telemetry dashboards, automated research newsletter pipelines, and robust OCR extraction workflows. Backed by 3.7+ years in KYC fraud verification at Pi Network, enterprise reporting systems experience, and post-graduate project management credentials from Loyalist College (Canada).
             </p>
 
-            {/* Primary Action Buttons (Inspired by The Drop Store's punchy call-to-actions) */}
+            {/* Primary Action Buttons */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
+              {/* Download Resume Button (Recruiter priority #1) */}
+              <button
+                type="button"
+                onClick={generateResumePdf}
+                className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0 bg-blue-600 hover:bg-blue-500 text-white focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none cursor-pointer"
+                aria-label="Download Bharatkumar Chandvani's Resume in PDF format"
+              >
+                <FileDown className="w-4 h-4" />
+                <span>Download Resume (PDF)</span>
+              </button>
+
+              {/* Career Assistant Chat Button (Unified Name) */}
               <button
                 type="button"
                 onClick={onOpenChat}
-                className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
+                className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md border shadow-xs transition-all transform hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none cursor-pointer ${
                   isDark
-                    ? "bg-blue-600 hover:bg-blue-500 text-white"
-                    : "bg-zinc-950 hover:bg-zinc-800 text-white"
+                    ? "bg-zinc-900 border-zinc-700 hover:bg-zinc-800 text-white"
+                    : "bg-white border-zinc-400 hover:bg-zinc-100 text-zinc-900"
                 }`}
               >
-                <Bot className="w-4 h-4" aria-hidden="true" />
-                <span>Chat with AI Co-Pilot</span>
+                <Bot className="w-4 h-4 text-blue-500" />
+                <span>Career Assistant</span>
               </button>
 
+              {/* View Projects shortcut */}
               <button
                 type="button"
-                onClick={onScrollToAudio}
-                className={`inline-flex items-center gap-2 px-3.5 py-2.5 text-xs font-semibold rounded-md border transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
+                onClick={onScrollToProjects}
+                className={`inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-semibold rounded-md border transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none cursor-pointer ${
                   isDark
-                    ? "bg-zinc-900 border-zinc-700 text-zinc-100 hover:bg-zinc-800"
-                    : "bg-white border-zinc-400 text-zinc-950 hover:bg-zinc-100 shadow-xs"
+                    ? "bg-zinc-950 border-zinc-800 text-zinc-300 hover:bg-zinc-900"
+                    : "bg-zinc-50 border-zinc-300 text-zinc-800 hover:bg-zinc-100"
                 }`}
               >
-                <Volume2 className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />
-                <span>Audio Bio (TTS)</span>
+                <span>View Projects</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
+              {/* AI Lab Sandbox shortcut */}
               <button
                 type="button"
-                onClick={onScrollToVeo}
-                className={`inline-flex items-center gap-2 px-3.5 py-2.5 text-xs font-semibold rounded-md border transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
+                onClick={onScrollToAILab}
+                className={`inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-semibold rounded-md border transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none cursor-pointer ${
                   isDark
-                    ? "bg-zinc-900 border-zinc-700 text-purple-300 hover:bg-zinc-800"
-                    : "bg-purple-50 border-purple-300 text-purple-900 hover:bg-purple-100 shadow-xs"
+                    ? "bg-zinc-950 border-zinc-800 text-purple-300 hover:bg-zinc-900"
+                    : "bg-purple-50 border-purple-200 text-purple-900 hover:bg-purple-100"
                 }`}
               >
-                <Film className="w-3.5 h-3.5 text-purple-500" aria-hidden="true" />
-                <span>Veo 3.1 Studio</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={onScrollToMaps}
-                className={`inline-flex items-center gap-2 px-3.5 py-2.5 text-xs font-semibold rounded-md border transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
-                  isDark
-                    ? "bg-zinc-900 border-zinc-700 text-amber-300 hover:bg-zinc-800"
-                    : "bg-amber-50 border-amber-300 text-amber-900 hover:bg-amber-100 shadow-xs"
-                }`}
-              >
-                <Compass className="w-3.5 h-3.5 text-amber-500" aria-hidden="true" />
-                <span>Maps Grounding</span>
+                <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                <span>AI Lab Sandbox</span>
               </button>
             </div>
 
-            {/* Verified Contact Details with One-Click Copy */}
+            {/* Verified Contact Details with Direct Clickable Links + Copy Badges */}
             <div
               className={`pt-5 border-t flex flex-wrap items-center gap-y-3 gap-x-6 text-xs ${
                 isDark ? "border-zinc-800 text-zinc-400" : "border-zinc-300 text-zinc-700"
               }`}
             >
+              {/* Clickable Email Link */}
+              <div className="flex items-center gap-1.5 bg-inherit">
+                <a
+                  href={`mailto:${PROFILE_INFO.contact.email}`}
+                  className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                  title="Open mail client to send message"
+                >
+                  <Mail className="w-3.5 h-3.5 text-rose-500" aria-hidden="true" />
+                  <span>{PROFILE_INFO.contact.email}</span>
+                </a>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard(PROFILE_INFO.contact.email, "email")}
+                  className="p-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  title="Copy email to clipboard"
+                  aria-label="Copy email address"
+                >
+                  {copiedKey === "email" ? (
+                    <Check className="w-3 h-3 text-emerald-500" />
+                  ) : (
+                    <Copy className="w-3 h-3 opacity-70" />
+                  )}
+                </button>
+              </div>
+
+              {/* Clickable Phone Link */}
+              <div className="flex items-center gap-1.5 bg-inherit">
+                <a
+                  href={`tel:${PROFILE_INFO.contact.phone}`}
+                  className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium"
+                  title="Call Bharatkumar Chandvani"
+                >
+                  <Phone className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />
+                  <span>{PROFILE_INFO.contact.phone}</span>
+                </a>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard(PROFILE_INFO.contact.phone, "phone")}
+                  className="p-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  title="Copy phone to clipboard"
+                  aria-label="Copy phone number"
+                >
+                  {copiedKey === "phone" ? (
+                    <Check className="w-3 h-3 text-emerald-500" />
+                  ) : (
+                    <Copy className="w-3 h-3 opacity-70" />
+                  )}
+                </button>
+              </div>
+
+              {/* GitHub */}
               <a
                 href={PROFILE_INFO.contact.github}
                 target="_blank"
@@ -189,6 +243,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <span>github.com/bharatkumar00797</span>
               </a>
 
+              {/* LinkedIn */}
               <a
                 href={PROFILE_INFO.contact.linkedin}
                 target="_blank"
@@ -198,112 +253,75 @@ export const Hero: React.FC<HeroProps> = ({
                 <Linkedin className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
                 <span>linkedin.com/in/bharat-chandvani</span>
               </a>
-
-              <button
-                type="button"
-                onClick={() =>
-                  copyToClipboard(PROFILE_INFO.contact.email, "email")
-                }
-                className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium cursor-pointer"
-                title="Click to copy email address"
-              >
-                <Mail className="w-3.5 h-3.5 text-rose-500" aria-hidden="true" />
-                <span>{PROFILE_INFO.contact.email}</span>
-                {copiedKey === "email" ? (
-                  <Check className="w-3 h-3 text-emerald-500" />
-                ) : (
-                  <Copy className="w-3 h-3 opacity-60" />
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={() =>
-                  copyToClipboard(PROFILE_INFO.contact.phone, "phone")
-                }
-                className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium cursor-pointer"
-                title="Click to copy phone number"
-              >
-                <Phone className="w-3.5 h-3.5 text-amber-500" aria-hidden="true" />
-                <span>{PROFILE_INFO.contact.phone}</span>
-                {copiedKey === "phone" ? (
-                  <Check className="w-3 h-3 text-emerald-500" />
-                ) : (
-                  <Copy className="w-3 h-3 opacity-60" />
-                )}
-              </button>
             </div>
+
+            {/* Visual copy feedback toast notification */}
+            {copiedToast && (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold bg-emerald-500 text-white shadow-lg animate-in fade-in slide-in-from-top-1">
+                <Check className="w-3.5 h-3.5" />
+                <span>{copiedToast}</span>
+              </div>
+            )}
           </div>
 
-          {/* Quick Metrics & Highlights Card (The Drop Store aesthetic) */}
+          {/* Quick Metrics & Highlights Card */}
           <div
             className={`lg:col-span-4 rounded-xl p-6 border transition-colors relative overflow-hidden ${
               isDark
-                ? "bg-zinc-900/80 border-zinc-800 text-zinc-100"
-                : "bg-zinc-50 border-zinc-300 text-zinc-900 shadow-sm"
+                ? "bg-zinc-900/60 border-zinc-800 text-zinc-100"
+                : "bg-white border-zinc-300 text-zinc-900 shadow-sm"
             }`}
           >
-            <div className="space-y-5">
-              <div className="border-b pb-3 border-inherit">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-                  VERIFIED PROFILE METRICS
+            <div className="space-y-4">
+              <div className="flex items-center justify-between border-b pb-3 border-inherit">
+                <div className="text-xs font-bold uppercase tracking-wider opacity-70">
+                  Candidate Snapshot
+                </div>
+                <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  Ready to Deploy
                 </span>
-                <div className="mt-1 flex items-baseline justify-between">
-                  <span className="text-lg font-black">Core Attributes</span>
-                  <span className="text-xs opacity-70">Nadiad, Gujarat</span>
+              </div>
+
+              <div className="space-y-3 text-xs">
+                <div>
+                  <div className="text-[10px] uppercase font-bold text-zinc-500">Core Stack</div>
+                  <div className="font-semibold text-sm mt-0.5">
+                    Python · Next.js · FastAPI · AWS · .NET 8
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-[10px] uppercase font-bold text-zinc-500">Key Projects</div>
+                  <div className="font-medium mt-0.5 leading-snug">
+                    Agent Governance Dashboard, AI Newsletter Pipeline, OCR Extraction, AWS Serverless
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-[10px] uppercase font-bold text-zinc-500">Domain Background</div>
+                  <div className="font-medium mt-0.5 leading-snug">
+                    3.7+ Years KYC Identity Fraud Verification · Logistics Operations · Project Management
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-[10px] uppercase font-bold text-zinc-500">Education</div>
+                  <div className="font-medium mt-0.5 leading-snug">
+                    PG Project Management (Toronto, Canada) · B.E. Mechanical Engineering
+                  </div>
                 </div>
               </div>
 
-              {/* Bold Stat Numbers */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 rounded-lg border border-inherit bg-inherit">
-                  <div className="text-2xl font-black text-blue-500">3.7+</div>
-                  <div className="text-[11px] font-semibold opacity-75 mt-0.5">
-                    Years KYC Validation
-                  </div>
-                  <div className="text-[10px] opacity-60 mt-1">Pi Network compliance</div>
-                </div>
-
-                <div className="p-3 rounded-lg border border-inherit bg-inherit">
-                  <div className="text-2xl font-black text-emerald-500">5+</div>
-                  <div className="text-[11px] font-semibold opacity-75 mt-0.5">
-                    Production AI Patterns
-                  </div>
-                  <div className="text-[10px] opacity-60 mt-1">Tool calling & schema</div>
-                </div>
-
-                <div className="p-3 rounded-lg border border-inherit bg-inherit">
-                  <div className="text-2xl font-black text-amber-500">3</div>
-                  <div className="text-[11px] font-semibold opacity-75 mt-0.5">
-                    Academic Degrees
-                  </div>
-                  <div className="text-[10px] opacity-60 mt-1">Loyalist, Lambton, CHARUSAT</div>
-                </div>
-
-                <div className="p-3 rounded-lg border border-inherit bg-inherit">
-                  <div className="text-2xl font-black text-purple-500">99.9%</div>
-                  <div className="text-[11px] font-semibold opacity-75 mt-0.5">
-                    Uptime & Operations
-                  </div>
-                  <div className="text-[10px] opacity-60 mt-1">Tanmay & Claire Salon</div>
-                </div>
-              </div>
-
-              {/* Verified Assurance */}
-              <div
-                className={`p-3 rounded-md border text-xs flex items-start gap-2.5 ${
-                  isDark
-                    ? "bg-zinc-950/70 border-zinc-800 text-zinc-300"
-                    : "bg-white border-zinc-300 text-zinc-800"
-                }`}
-              >
-                <ShieldCheck
-                  className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"
-                  aria-hidden="true"
-                />
-                <p className="leading-relaxed text-[11px]">
-                  Verified directly from LinkedIn & official resume. Ready for hands-on technical assessment, code pairing, and immediate deployment.
-                </p>
+              {/* Direct Resume Download Card Action */}
+              <div className="pt-3 border-t border-inherit">
+                <button
+                  type="button"
+                  onClick={generateResumePdf}
+                  className="w-full py-2.5 px-3 rounded-md border text-xs font-bold transition-all flex items-center justify-center gap-2 bg-blue-50 dark:bg-blue-950/40 border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/60 cursor-pointer"
+                >
+                  <FileDown className="w-3.5 h-3.5" />
+                  <span>Download Complete Resume (PDF)</span>
+                </button>
               </div>
             </div>
           </div>

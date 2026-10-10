@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+*.pem
+*.key
+
+# Firebase and cloud credentials (protect from GitHub sync)
+firebase-applet-config.json
+firebase-applet-config.*.json
+firebase-blueprint.json

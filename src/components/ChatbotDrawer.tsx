@@ -37,7 +37,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
       id: "initial-agent-msg",
       role: "model",
       content:
-        "Hello! I am Bharatkumar Chandvani's AI Career Co-Pilot. I have full context on Bharat's technical background — from his hands-on work with AI agents, Python, and .NET, to his KYC verification track record at Pi Network and project management credentials. How can I help evaluate his fit for your team?",
+        "Hello! I am Bharatkumar Chandvani's Career Assistant. I have full context on Bharat's technical background — including his featured projects (Agent Governance Dashboard, AI Newsletter Pipeline, OCR Extraction, AWS Serverless), his 3.7+ years in KYC verification at Pi Network, and project management credentials from Canada. How can I help evaluate his fit for your team?",
       modelUsed: "gemini-3.5-flash",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
@@ -183,11 +183,11 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
             </div>
             <div>
               <h2 id="chat-heading" className="text-sm font-bold tracking-tight">
-                Bharat's AI Career Co-Pilot
+                Career Assistant
               </h2>
               <div className="flex items-center gap-1.5 text-[11px] opacity-75">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                <span>Multi-turn verified chat</span>
+                <span>Verified technical context</span>
               </div>
             </div>
           </div>

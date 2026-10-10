@@ -39,7 +39,7 @@ export interface ProjectItem {
   id: string;
   title: string;
   tagline: string;
-  category: "Python & Data" | "Cloud & AWS" | "Full-Stack" | "AI Roadmap" | "AI / Agents" | "Cloud & Data";
+  category: "AI & Governance" | "AI Automation" | "Python & Data" | "Cloud & AWS" | "Full-Stack" | "AI Roadmap" | string;
   description: string;
   achievements: string[];
   technologies: string[];
@@ -47,6 +47,9 @@ export interface ProjectItem {
   liveUrl?: string;
   featured: boolean;
   architectureHighlights: string;
+  mockupType?: "governance-dashboard" | "newsletter-pipeline" | "ocr-scanner" | "aws-cloud" | "portfolio-browser" | "python-cli" | "agent-orchestrator";
+  demoUrl?: string;
+  demoLabel?: string;
 }
 
 export interface ChatMessage {

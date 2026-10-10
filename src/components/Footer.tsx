@@ -1,7 +1,8 @@
 import React from "react";
 import { ThemeMode } from "../types";
 import { PROFILE_INFO } from "../data/portfolioData";
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { generateResumePdf } from "../utils/generateResumePdf";
+import { Github, Linkedin, Mail, ArrowUp, FileDown } from "lucide-react";
 
 interface FooterProps {
   theme: ThemeMode;
@@ -57,6 +58,16 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
               <Mail className="w-3.5 h-3.5 text-rose-500" />
               <span>Email</span>
             </a>
+
+            <button
+              type="button"
+              onClick={generateResumePdf}
+              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1.5 font-semibold text-blue-600 dark:text-blue-400 cursor-pointer"
+              aria-label="Download Resume PDF"
+            >
+              <FileDown className="w-3.5 h-3.5" />
+              <span>Resume (PDF)</span>
+            </button>
 
             <span className="opacity-30" aria-hidden="true">
               |

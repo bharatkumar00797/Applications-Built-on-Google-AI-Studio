@@ -2,5 +2,7 @@
   "name": "Bharatkumar Chandvani Portfolio",
   "description": "Professional AI Engineer and Full Stack Developer portfolio featuring interactive career assistant, AI voice synthesis, and generative video systems.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

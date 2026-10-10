@@ -122,13 +122,11 @@ const RESUME_DATA = {
       period: "June 2024 - June 2024",
       duration: "1 month",
       location: "Delray Beach, Florida, United States",
-      type: "Digital Design & Visual Layout",
+      type: "Business Card Design",
       bullets: [
-        "Conducted client consultations to translate brand vision and requirements into modern vector identities.",
-        "Developed initial design concepts, mockups, and typography treatments across multiple review cycles.",
-        "Delivered final production-ready assets in vector and raster formats (PDF, PNG, AI) for print and digital deployments.",
+        "Designed business cards for a freelance client using Adobe Illustrator, Photoshop and InDesign.",
       ],
-      technologies: ["Adobe Illustrator", "Photoshop", "InDesign", "Trello", "Slack"],
+      technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
     },
     {
       id: "pi-network",
@@ -244,7 +242,7 @@ Work Experience:
 1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project is not deployed live.
 2. Tanmay Travels (Relationship Manager & Technical Operations, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
 3. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
-4. CRAIG SPODAK (Freelance Graphic Designer, June 2024): Produced modern branding vector and layout assets using Adobe Creative Suite.
+4. CRAIG SPODAK (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
 5. Pi Network (KYC Validator, freelance, July 2020 - Mar 2024): reviewed user identity documents against KYC requirements.
 6. Ression (Junior Web Developer, May 2022 - Dec 2022): C#, .NET, Xamarin, SQL, REST APIs, Git, unit testing.
 7. Loyalist College (Project Coordinator, Jan 2022 - Apr 2022): Excel dashboards, GIS evaluation (ArcGIS vs QGIS).

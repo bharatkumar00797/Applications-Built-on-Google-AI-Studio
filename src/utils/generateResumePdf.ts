@@ -94,7 +94,7 @@ export const generateResumePdf = () => {
   // 2. TECHNICAL SKILLS
   addSectionTitle("Technical Skills");
   const skillsList = [
-    { label: "AI & LLMs", text: "Prompt Engineering, AI Agents, LLM tool/function calling, structured output (Pydantic), agent evaluation (LLM-as-judge), OpenAI/Anthropic APIs, RAG fundamentals" },
+    { label: "AI & LLMs", text: "Prompt Engineering, AI Agents, LLM tool/function calling, structured output (Pydantic), agent evaluation, OpenAI/Anthropic APIs, RAG fundamentals" },
     { label: "Languages", text: "Python, C#, JavaScript, PHP, SQL" },
     { label: "Frameworks & Tools", text: "v0, Railway.app, .NET, Xamarin, WordPress, Git, REST APIs" },
     { label: "Databases", text: "SQL (Advanced), MySQL, database design and optimization" },
@@ -255,7 +255,6 @@ export const generateResumePdf = () => {
   doc.text("AI Agents — Agent Engineering Portfolio (GitHub)", margin, y);
   y += 11;
   addBullet("Designing agents with tool/function calling, structured output (Pydantic), iterative prompt evaluation, and bounded agent loops with explicit stop conditions.");
-  addBullet("Implemented LLM-as-judge evaluation harness (golden test set + automated scoring) and state checkpointing so agents resume correctly after process crashes.");
   y += 4;
 
   // Project 2: Amazon Cloud Development

@@ -40,13 +40,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand identity */}
         <a
           href="#overview"
-          className="group flex flex-col focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded"
+          className="group flex flex-col min-w-0 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded"
         >
-          <span className="text-base font-extrabold tracking-tight group-hover:text-blue-500 transition-colors">
+          <span className="text-sm sm:text-base font-extrabold tracking-tight whitespace-nowrap group-hover:text-blue-500 transition-colors">
             Bharatkumar Chandvani
           </span>
           <span
-            className={`text-xs ${
+            className={`hidden sm:block text-xs ${
               isDark ? "text-zinc-400" : "text-zinc-600"
             }`}
           >

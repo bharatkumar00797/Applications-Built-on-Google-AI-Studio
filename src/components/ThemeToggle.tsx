@@ -26,12 +26,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, onToggle }) => 
       {isDark ? (
         <>
           <Sun className="w-3.5 h-3.5 text-amber-400" aria-hidden="true" />
-          <span>High Contrast Light</span>
+          <span className="hidden sm:inline">High Contrast Light</span>
         </>
       ) : (
         <>
           <Moon className="w-3.5 h-3.5 text-zinc-950" aria-hidden="true" />
-          <span className="font-bold">Dark Mode</span>
+          <span className="hidden sm:inline font-bold">Dark Mode</span>
         </>
       )}
     </button>

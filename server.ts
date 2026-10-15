@@ -30,7 +30,7 @@ const ai = new GoogleGenAI({
 const RESUME_DATA = {
   fullName: "Bharatkumar Chandvani",
   preferredName: "Bharat Chandvani",
-  headline: "AI Engineer | Full Stack Developer | Technical Support Engineer",
+  headline: "Full-Stack Developer | Transitioning into AI Engineering | Technical Support",
   location: "Nadiad, Gujarat, India",
   contact: {
     phone: "+91 7283961105",
@@ -231,7 +231,7 @@ Your role: Represent Bharatkumar (Bharat) Chandvani with accurate, professional,
 
 Profile Summary:
 - Full Name: Bharatkumar Chandvani (Bharat Chandvani)
-- Title: AI Engineer | Full Stack Developer | Technical Support Engineer
+- Title: Full-Stack Developer | Transitioning into AI Engineering | Technical Support
 - Location: Nadiad, Gujarat, India (Open to remote roles globally, junior AI/ML, and full-stack positions)
 - Contact: Chandvanibharat@gmail.com | Phone: +91 7283961105
 - LinkedIn: https://www.linkedin.com/in/bharat-chandvani/

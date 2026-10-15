@@ -50,6 +50,7 @@ export interface ProjectItem {
   mockupType?: "incident-commander" | "governance-dashboard" | "newsletter-pipeline" | "ocr-scanner" | "aws-cloud" | "portfolio-browser" | "python-cli" | "agent-orchestrator";
   demoUrl?: string;
   demoLabel?: string;
+  earlier?: boolean;
 }
 
 export interface ChatMessage {

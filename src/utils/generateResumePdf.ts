@@ -26,7 +26,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "italic");
   doc.setFontSize(10.5);
   doc.setTextColor(51, 65, 85);
-  doc.text("AI Engineer  |  Full Stack Developer  |  Technical Support Engineer", pageWidth / 2, y, { align: "center" });
+  doc.text("Full-Stack Developer  |  Transitioning into AI Engineering  |  Technical Support", pageWidth / 2, y, { align: "center" });
   y += 15;
 
   // Contact line
@@ -96,7 +96,7 @@ export const generateResumePdf = () => {
     { label: "Languages", text: "Python, C#, JavaScript, PHP, SQL" },
     { label: "Frameworks & Tools", text: "v0, Railway.app, .NET, Xamarin, WordPress, Git, REST APIs" },
     { label: "Databases", text: "SQL (Advanced), MySQL, database design and optimization" },
-    { label: "Cloud", text: "AWS EC2, Lambda, MySQL on RDS-style setups, snapshots" },
+    { label: "Cloud", text: "AWS Lambda, API Gateway, DynamoDB, S3, EC2, VPC, IAM" },
     { label: "Certifications", text: "Google Data Analytics, CyberSecurity Foundations, SQL Advanced" },
   ];
 

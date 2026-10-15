@@ -69,6 +69,9 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                 <h3 id="project-modal-title" className="text-base sm:text-lg font-bold truncate">
                   {project.title}
                 </h3>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/30">
+                  Illustration, sample data
+                </span>
                 <span
                   className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${
                     isDark
@@ -198,19 +201,19 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                       <span className="col-span-4 font-semibold text-white">doc-verifier-agent-v2</span>
                       <span className="col-span-3 text-zinc-300">gemini-3.8-flash</span>
                       <span className="col-span-3 text-zinc-400">ocr_read, hash_check</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Operational</span>
+                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
                     </div>
                     <div className="grid grid-cols-12 p-2 border-b border-zinc-800/60 items-center">
                       <span className="col-span-4 font-semibold text-white">news-synthesis-orchestrator</span>
                       <span className="col-span-3 text-zinc-300">gemini-3.8-flash</span>
                       <span className="col-span-3 text-zinc-400">rss_fetch, send_digest</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Operational</span>
+                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
                     </div>
                     <div className="grid grid-cols-12 p-2 items-center">
                       <span className="col-span-4 font-semibold text-white">support-ticket-classifier</span>
                       <span className="col-span-3 text-zinc-300">gemini-3.1-flash-lite</span>
                       <span className="col-span-3 text-zinc-400">db_query, slack_alert</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Operational</span>
+                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
                     </div>
                   </div>
                 </div>

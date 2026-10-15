@@ -185,7 +185,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="flex items-center gap-1.5 bg-inherit">
                 <a
                   href={`mailto:${PROFILE_INFO.contact.email}`}
-                  className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                  className="inline-flex items-center gap-1.5 py-3 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
                   title="Open mail client to send message"
                 >
                   <Mail className="w-3.5 h-3.5 text-rose-500" aria-hidden="true" />
@@ -194,7 +194,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   type="button"
                   onClick={() => copyToClipboard(PROFILE_INFO.contact.email, "email")}
-                  className="p-2 -m-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-3 -m-2 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                   title="Copy email to clipboard"
                   aria-label="Copy email address"
                 >
@@ -210,7 +210,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="flex items-center gap-1.5 bg-inherit">
                 <a
                   href={`tel:${PROFILE_INFO.contact.phone}`}
-                  className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium"
+                  className="inline-flex items-center gap-1.5 py-3 hover:text-blue-600 transition-colors font-medium"
                   title="Call Bharatkumar Chandvani"
                 >
                   <Phone className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />
@@ -219,7 +219,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   type="button"
                   onClick={() => copyToClipboard(PROFILE_INFO.contact.phone, "phone")}
-                  className="p-2 -m-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-3 -m-2 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                   title="Copy phone to clipboard"
                   aria-label="Copy phone number"
                 >
@@ -236,7 +236,7 @@ export const Hero: React.FC<HeroProps> = ({
                 href={PROFILE_INFO.contact.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium"
+                className="inline-flex items-center gap-1.5 py-3 hover:text-blue-600 transition-colors font-medium"
               >
                 <Github className="w-3.5 h-3.5" aria-hidden="true" />
                 <span>github.com/bharatkumar00797</span>
@@ -247,7 +247,7 @@ export const Hero: React.FC<HeroProps> = ({
                 href={PROFILE_INFO.contact.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-blue-600 transition-colors font-medium"
+                className="inline-flex items-center gap-1.5 py-3 hover:text-blue-600 transition-colors font-medium"
               >
                 <Linkedin className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
                 <span>linkedin.com/in/bharat-chandvani</span>

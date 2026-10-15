@@ -43,68 +43,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       ? PROJECTS
       : PROJECTS.filter((p) => p.category === selectedFilter);
 
-  return (
-    <section id="projects" className="py-16 border-b transition-colors border-inherit">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
-              Featured Work & Systems
-            </div>
-            <h2
-              className={`text-2xl sm:text-3xl font-extrabold tracking-tight ${
-                isDark ? "text-zinc-50" : "text-zinc-950"
-              }`}
-            >
-              Projects & Interactive Demos
-            </h2>
-            <p
-              className={`text-xs sm:text-sm mt-1 max-w-2xl ${
-                isDark ? "text-zinc-400" : "text-zinc-600"
-              }`}
-            >
-              Featured AI systems, cloud architectures, and automated pipelines. Click "View Demo" on any project to inspect interactive dashboards, OCR workflows, and system topologies.
-            </p>
-          </div>
+  const mainProjects = filteredProjects.filter((p) => !p.earlier);
+  const earlierProjects = filteredProjects.filter((p) => p.earlier);
 
-          {/* Filter Segmented Control */}
-          <div
-            className={`inline-flex flex-wrap items-center gap-1 p-1 rounded-lg border text-xs ${
-              isDark ? "bg-zinc-900 border-zinc-800" : "bg-zinc-100 border-zinc-300"
-            }`}
-            role="tablist"
-            aria-label="Filter projects by category"
-          >
-            {categories.map((cat) => {
-              const isSelected = selectedFilter === cat;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  role="tab"
-                  aria-selected={isSelected}
-                  onClick={() => setSelectedFilter(cat)}
-                  className={`px-3 py-1.5 font-medium rounded-md transition-all focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
-                    isSelected
-                      ? isDark
-                        ? "bg-zinc-800 text-white font-bold shadow-xs"
-                        : "bg-white text-zinc-950 font-bold shadow-xs border border-zinc-300"
-                      : isDark
-                      ? "text-zinc-400 hover:text-zinc-200"
-                      : "text-zinc-700 hover:text-zinc-950"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-          {filteredProjects.map((project) => (
+  const renderCard = (project: ProjectItem) => (
             <article
               key={project.id}
               className={`rounded-xl border p-6 flex flex-col justify-between transition-all duration-200 hover:shadow-md ${
@@ -294,7 +236,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   <button
                     type="button"
                     onClick={() => setActiveModalProject(project)}
-                    className="inline-flex items-center gap-1.5 font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1.5 py-3 font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                   >
                     <Play className="w-3 h-3 fill-current" />
                     <span>View Demo</span>
@@ -304,7 +246,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className={`inline-flex items-center gap-1.5 font-semibold transition-colors hover:text-blue-600 ${
+                    className={`inline-flex items-center gap-1.5 py-3 font-semibold transition-colors hover:text-blue-600 ${
                       isDark ? "text-zinc-300" : "text-zinc-800"
                     }`}
                   >
@@ -312,12 +254,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     <span>GitHub</span>
                   </a>
 
-                  {project.id === "personal-portfolio-scratch" && (
+                  {project.liveUrl && (
                     <a
-                      href="https://bharatkumar00797.github.io"
+                      href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1 font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                      className="inline-flex items-center gap-1 py-3 font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
                     >
                       <ExternalLink className="w-3 h-3" />
                       <span>Live Site</span>
@@ -332,7 +274,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       `Tell me about Bharat's "${project.title}" project and how he architected the solution.`
                     )
                   }
-                  className="inline-flex items-center gap-1 text-zinc-500 hover:text-blue-600 dark:hover:text-blue-400 text-[11px] font-medium"
+                  className="inline-flex items-center gap-1 py-3 text-zinc-500 hover:text-blue-600 dark:hover:text-blue-400 text-[11px] font-medium"
                 >
                   <Bot className="w-3 h-3" />
                   <span>Ask Career Assistant</span>
@@ -340,8 +282,86 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 </button>
               </div>
             </article>
-          ))}
+  );
+
+  return (
+    <section id="projects" className="py-16 border-b transition-colors border-inherit">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+              Featured Work & Systems
+            </div>
+            <h2
+              className={`text-2xl sm:text-3xl font-extrabold tracking-tight ${
+                isDark ? "text-zinc-50" : "text-zinc-950"
+              }`}
+            >
+              Projects & Interactive Demos
+            </h2>
+            <p
+              className={`text-xs sm:text-sm mt-1 max-w-2xl ${
+                isDark ? "text-zinc-400" : "text-zinc-600"
+              }`}
+            >
+              Featured AI systems, cloud architectures, and automated pipelines. Click "View Demo" on any project to inspect interactive dashboards, OCR workflows, and system topologies.
+            </p>
+          </div>
+
+          {/* Filter Segmented Control */}
+          <div
+            className={`inline-flex flex-wrap items-center gap-1 p-1 rounded-lg border text-xs ${
+              isDark ? "bg-zinc-900 border-zinc-800" : "bg-zinc-100 border-zinc-300"
+            }`}
+            role="tablist"
+            aria-label="Filter projects by category"
+          >
+            {categories.map((cat) => {
+              const isSelected = selectedFilter === cat;
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  role="tab"
+                  aria-selected={isSelected}
+                  onClick={() => setSelectedFilter(cat)}
+                  className={`px-3 py-1.5 font-medium rounded-md transition-all focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none ${
+                    isSelected
+                      ? isDark
+                        ? "bg-zinc-800 text-white font-bold shadow-xs"
+                        : "bg-white text-zinc-950 font-bold shadow-xs border border-zinc-300"
+                      : isDark
+                      ? "text-zinc-400 hover:text-zinc-200"
+                      : "text-zinc-700 hover:text-zinc-950"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
         </div>
+
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {mainProjects.map(renderCard)}
+        </div>
+
+        {earlierProjects.length > 0 && (
+          <details className="mt-10 group/earlier">
+            <summary
+              className={`cursor-pointer select-none py-3 text-sm font-bold ${
+                isDark ? "text-zinc-300" : "text-zinc-800"
+              }`}
+            >
+              Earlier work (2024 learning projects, {earlierProjects.length})
+            </summary>
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-7">
+              {earlierProjects.map(renderCard)}
+            </div>
+          </details>
+        )}
       </div>
 
       {/* Live Interactive Project Modal */}

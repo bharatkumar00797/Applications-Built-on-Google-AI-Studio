@@ -3,7 +3,7 @@ import { ExperienceItem, EducationItem, CertificationItem, ProjectItem, ImageAna
 export const PROFILE_INFO = {
   name: "Bharatkumar Chandvani",
   shortName: "Bharat Chandvani",
-  title: "AI Engineer | Full Stack Developer | Technical Support Engineer",
+  title: "Full-Stack Developer | Transitioning into AI Engineering | Technical Support",
   location: "Nadiad, Gujarat, India",
   headline: "Building Autonomous AI Agents, Full-Stack Applications & Portfolio Projects",
   summary:
@@ -20,6 +20,27 @@ export const PROFILE_INFO = {
 };
 
 export const PROJECTS: ProjectItem[] = [
+  {
+    id: "agent-governance-dashboard",
+    title: "Agent Inventory & Governance Dashboard",
+    tagline: "Demo dashboard for cataloguing AI agents, with risk scoring, policies, and audit trails",
+    category: "AI & Governance",
+    featured: true,
+    description:
+      "A demo platform for discovering, monitoring, and governing AI agents: an agent inventory, risk scoring, policies, and audit trails, with sample data.",
+    achievements: [
+      "Next.js frontend showing the agent inventory, risk scores, and audit history, deployed on Vercel.",
+      "FastAPI backend with SQLAlchemy models for the agent registry and audit records, deployed on Railway.",
+      "Policy checks that flag agents breaking configured rules.",
+    ],
+    technologies: ["Next.js", "FastAPI", "SQLAlchemy", "Tailwind CSS", "Python", "Vercel", "Railway"],
+    githubUrl: "https://github.com/bharatkumar00797/agent-governance-dashboard",
+    liveUrl: "https://agent-governance-dashboard-lovat.vercel.app",
+    demoUrl: "#demo-agent-governance",
+    demoLabel: "Dashboard Demo",
+    mockupType: "governance-dashboard",
+    architectureHighlights: "Next.js client on Vercel calling a FastAPI and SQLAlchemy backend on Railway.",
+  },
   {
     id: "incident-commander-ai",
     title: "Incident Commander AI (Simulated Environment Demo)",
@@ -41,26 +62,6 @@ export const PROJECTS: ProjectItem[] = [
     architectureHighlights: "Bounded agent loop with read-only diagnostics, approval gates before any remediation, and a simulated environment in place of real infrastructure.",
   },
   {
-    id: "agent-governance-dashboard",
-    title: "Agent Inventory & Governance Dashboard",
-    tagline: "Demo dashboard for cataloguing AI agents, with risk scoring, policies, and audit trails",
-    category: "AI & Governance",
-    featured: true,
-    description:
-      "A demo platform for discovering, monitoring, and governing AI agents: an agent inventory, risk scoring, policies, and audit trails, with sample data.",
-    achievements: [
-      "Next.js frontend showing the agent inventory, risk scores, and audit history, deployed on Vercel.",
-      "FastAPI backend with SQLAlchemy models for the agent registry and audit records, deployed on Railway.",
-      "Policy checks that flag agents breaking configured rules.",
-    ],
-    technologies: ["Next.js", "FastAPI", "SQLAlchemy", "Tailwind CSS", "Python", "Vercel", "Railway"],
-    githubUrl: "https://github.com/bharatkumar00797/agent-governance-dashboard",
-    demoUrl: "#demo-agent-governance",
-    demoLabel: "Dashboard Demo",
-    mockupType: "governance-dashboard",
-    architectureHighlights: "Next.js client on Vercel calling a FastAPI and SQLAlchemy backend on Railway.",
-  },
-  {
     id: "ai-newsletter-automation",
     title: "AI Newsletter Automation Pipeline",
     tagline: "End-to-end automated pipeline synthesizing arXiv research, tech trends, and dispatching formatted email digests",
@@ -79,6 +80,26 @@ export const PROJECTS: ProjectItem[] = [
     demoLabel: "Pipeline Demo",
     mockupType: "newsletter-pipeline",
     architectureHighlights: "Demo: runs with a mock LLM by default for the walkthrough. Multi-stage pipeline: Scheduled feed polling -> semantic relevance filtering -> Gemini summarization -> HTML template rendering -> batch email dispatch.",
+  },
+  {
+    id: "agentic-workflow-engine",
+    title: "Agent Tool-Calling Prototype (In Progress)",
+    tagline: "Experimental prototype exploring multi-turn reasoning and dynamic tool execution",
+    category: "AI Roadmap",
+    featured: false,
+    description:
+      "An active research and development prototype exploring multi-turn LLM reasoning, dynamic tool execution, stateful memory management, and structured JSON schema validation for automated developer workflows.",
+    achievements: [
+      "Prototyping dynamic tool dispatch and schema validation using Pydantic and TypeScript contracts.",
+      "Designing state persistence models across multi-turn developer interactions.",
+      "Active development repository tracking progress on GitHub.",
+    ],
+    technologies: ["Gemini 3 SDK", "Python", "TypeScript", "Node.js", "Express", "Agentic Workflows"],
+    githubUrl: "https://github.com/bharatkumar00797/devpilot-ai-swe-agent",
+    demoUrl: "#demo-agent-orchestrator",
+    demoLabel: "Interactive Tool Calling Trace",
+    mockupType: "agent-orchestrator",
+    architectureHighlights: "Server-side proxy pattern isolating AI credentials, structured schema enforcement, and tool-calling execution loop.",
   },
   {
     id: "pdf-data-extraction-ocr",
@@ -105,6 +126,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Serverless Web Application on AWS",
     tagline: "Event-driven cloud application utilizing AWS Lambda, API Gateway, DynamoDB & S3",
     category: "Cloud & AWS",
+    earlier: true,
     featured: true,
     description:
       "A learning project: a serverless web application on Amazon Web Services, using AWS Lambda functions for compute, API Gateway for secure REST endpoints, DynamoDB for NoSQL persistence, and S3 for static assets.",
@@ -125,6 +147,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Amazon Cloud Development & Infrastructure",
     tagline: "AWS cloud architecture, IAM security governance, VPC configuration, and EC2 provisioning",
     category: "Cloud & AWS",
+    earlier: true,
     featured: false,
     description:
       "Practical cloud engineering repository implementing AWS core services, secure VPC networking, IAM security policies, EC2 compute configurations, and cloud deployment foundations.",
@@ -141,30 +164,11 @@ export const PROJECTS: ProjectItem[] = [
     architectureHighlights: "Learning project covering VPC networking, IAM policies, and EC2 setup.",
   },
   {
-    id: "personal-portfolio-scratch",
-    title: "Hand-Crafted Developer Portfolio (v1)",
-    tagline: "First-ever portfolio built from scratch with HTML5, CSS3, JavaScript & Bootstrap",
-    category: "Full-Stack",
-    featured: false,
-    description:
-      "The foundational personal portfolio built entirely from scratch. Demonstrates core front-end engineering fundamentals including responsive grid layouts, custom CSS animations, DOM interactions, and mobile viewport optimization.",
-    achievements: [
-      "Built responsive front-end from the ground up without heavy front-end frameworks, ensuring instant load times.",
-      "Implemented clean mobile-first navigation and custom styling using modern CSS and Bootstrap components.",
-      "Served live via GitHub Pages as an early open-source project showcase.",
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "GitHub Pages"],
-    githubUrl: "https://github.com/bharatkumar00797/bharatkumar00797.github.io",
-    demoUrl: "https://bharatkumar00797.github.io",
-    demoLabel: "GitHub Pages Site",
-    mockupType: "portfolio-browser",
-    architectureHighlights: "Semantic HTML5 markup with zero-dependency vanilla JavaScript event handling and responsive styling.",
-  },
-  {
     id: "python-automation-scripts",
     title: "Python Engineering & Automation Suite",
     tagline: "Backend scripts, automation routines, and data structure implementations",
     category: "Python & Data",
+    earlier: true,
     featured: false,
     description:
       "Collection of practical Python scripts and algorithmic utilities for automated file management, data transformations, and backend CLI task workflows.",
@@ -181,24 +185,26 @@ export const PROJECTS: ProjectItem[] = [
     architectureHighlights: "Modular utility functions with standard library focus for lightweight, dependency-free execution.",
   },
   {
-    id: "agentic-workflow-engine",
-    title: "Agent Tool-Calling Prototype (In Progress)",
-    tagline: "Experimental prototype exploring multi-turn reasoning and dynamic tool execution",
-    category: "AI Roadmap",
+    id: "personal-portfolio-scratch",
+    title: "Hand-Crafted Developer Portfolio (v1)",
+    tagline: "First-ever portfolio built from scratch with HTML5, CSS3, JavaScript & Bootstrap",
+    category: "Full-Stack",
+    earlier: true,
     featured: false,
     description:
-      "An active research and development prototype exploring multi-turn LLM reasoning, dynamic tool execution, stateful memory management, and structured JSON schema validation for automated developer workflows.",
+      "The foundational personal portfolio built entirely from scratch. Demonstrates core front-end engineering fundamentals including responsive grid layouts, custom CSS animations, DOM interactions, and mobile viewport optimization.",
     achievements: [
-      "Prototyping dynamic tool dispatch and schema validation using Pydantic and TypeScript contracts.",
-      "Designing state persistence models across multi-turn developer interactions.",
-      "Active development repository tracking progress on GitHub.",
+      "Built responsive front-end from the ground up without heavy front-end frameworks, ensuring instant load times.",
+      "Implemented clean mobile-first navigation and custom styling using modern CSS and Bootstrap components.",
+      "Served live via GitHub Pages as an early open-source project showcase.",
     ],
-    technologies: ["Gemini 3 SDK", "Python", "TypeScript", "Node.js", "Express", "Agentic Workflows"],
-    githubUrl: "https://github.com/bharatkumar00797/devpilot-ai-swe-agent",
-    demoUrl: "#demo-agent-orchestrator",
-    demoLabel: "Interactive Tool Calling Trace",
-    mockupType: "agent-orchestrator",
-    architectureHighlights: "Server-side proxy pattern isolating AI credentials, structured schema enforcement, and tool-calling execution loop.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "GitHub Pages"],
+    githubUrl: "https://github.com/bharatkumar00797/bharatkumar00797.github.io",
+    liveUrl: "https://bharatkumar00797.github.io",
+    demoUrl: "https://bharatkumar00797.github.io",
+    demoLabel: "GitHub Pages Site",
+    mockupType: "portfolio-browser",
+    architectureHighlights: "Semantic HTML5 markup with zero-dependency vanilla JavaScript event handling and responsive styling.",
   },
 ];
 

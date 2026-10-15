@@ -137,18 +137,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   {/* Visual preview content according to project */}
                   <div className="pt-2">
                     {project.id === "agent-governance-dashboard" && (
-                      <div className="space-y-1.5 font-mono text-[11px]">
-                        <div className="flex items-center justify-between text-zinc-400 text-[10px]">
-                          <span>Active Agents: 16 Operational</span>
-                          <span className="text-emerald-500 font-bold">100% Policy Pass</span>
-                        </div>
-                        <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-blue-500 to-emerald-400 h-full w-[88%]" />
-                        </div>
-                        <div className="text-[10px] text-zinc-500 flex justify-between pt-0.5">
-                          <span>Token Burn: 1.48M</span>
-                          <span>P95 Latency: 420ms</span>
-                        </div>
+                      <div className="space-y-1.5 font-mono text-[11px] text-zinc-400 text-[10px]">
+                        <div>Governance dashboard demo with 5 sample agents</div>
+                        <div className="text-zinc-500">Inventory, risk scores, policies and audit trail (sample data)</div>
                       </div>
                     )}
 

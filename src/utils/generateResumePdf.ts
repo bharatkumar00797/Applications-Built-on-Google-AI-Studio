@@ -145,7 +145,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "bold");
   doc.setFontSize(9.5);
   doc.setTextColor(15, 23, 42);
-  doc.text("Relationship Manager (Technical Operations & Reporting)", margin, y);
+  doc.text("Relationship Manager", margin, y);
   y += 11;
 
   doc.setFont("times", "italic");
@@ -192,7 +192,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "italic");
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
-  doc.text("Ression  |  Fredericton, NL, Canada", margin, y);
+  doc.text("Ression  |  Fredericton, NB, Canada", margin, y);
   doc.setFont("times", "normal");
   const date4 = "May 2022 – Dec 2022";
   doc.text(date4, margin + contentWidth - doc.getTextWidth(date4), y);

@@ -88,7 +88,7 @@ const RESUME_DATA = {
     },
     {
       id: "tanmay-travels",
-      role: "Relationship Manager (Technical Operations & Reporting)",
+      role: "Relationship Manager",
       company: "Tanmay Travels",
       period: "November 2024 - August 2026",
       duration: "1 year 10 months",
@@ -240,7 +240,7 @@ Profile Summary:
 
 Work Experience:
 1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project is not deployed live.
-2. Tanmay Travels (Relationship Manager & Technical Operations, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
+2. Tanmay Travels (Relationship Manager, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
 3. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
 4. CRAIG SPODAK (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
 5. Pi Network (KYC Validator, freelance, July 2020 - Mar 2024): reviewed user identity documents against KYC requirements.
@@ -305,7 +305,7 @@ Tone & Guidelines:
           return res.json({
             role: "model",
             content:
-              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He builds AI agent projects in Python, has worked with AWS Serverless, C# and .NET, and spent nearly four years as a freelance KYC Validator at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
+              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He builds AI agent projects in Python, has worked with AWS Serverless, C# and .NET, and spent 3+ years as a freelance KYC Validator at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
             modelUsed: "Career Assistant (offline answer)",
           });
         }

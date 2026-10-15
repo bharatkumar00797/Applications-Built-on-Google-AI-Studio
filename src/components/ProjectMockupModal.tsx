@@ -166,18 +166,18 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
                       <div className="text-[10px] text-zinc-400">REGISTERED AGENTS</div>
-                      <div className="text-lg font-bold text-white mt-1">16 Active</div>
-                      <div className="text-[9px] text-emerald-400">100% policy passing</div>
+                      <div className="text-lg font-bold text-white mt-1">5 Sample</div>
+                      <div className="text-[9px] text-emerald-400">Sample data</div>
                     </div>
                     <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
                       <div className="text-[10px] text-zinc-400">24H TOKEN CONSUMPTION</div>
-                      <div className="text-lg font-bold text-purple-400 mt-1">1.48M</div>
-                      <div className="text-[9px] text-zinc-400">Avg $0.0028 / req</div>
+                      <div className="text-lg font-bold text-purple-400 mt-1">Sample</div>
+                      <div className="text-[9px] text-zinc-400">Not measured</div>
                     </div>
                     <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
                       <div className="text-[10px] text-zinc-400">P95 LATENCY</div>
-                      <div className="text-lg font-bold text-sky-400 mt-1">420ms</div>
-                      <div className="text-[9px] text-emerald-400">-18% vs baseline</div>
+                      <div className="text-lg font-bold text-sky-400 mt-1">Sample</div>
+                      <div className="text-[9px] text-emerald-400">Not measured</div>
                     </div>
                     <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
                       <div className="text-[10px] text-zinc-400">AUDIT ANOMALIES</div>

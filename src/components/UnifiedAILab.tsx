@@ -42,7 +42,7 @@ export const UnifiedAILab: React.FC<UnifiedAILabProps> = ({ theme }) => {
                 isDark ? "text-zinc-400" : "text-zinc-600"
               }`}
             >
-              Hands-on implementations demonstrating real Google Gemini model capabilities: text-to-speech voice generation, Veo 3.1 video keyframe synthesis, and real-time Google Maps grounding.
+              Hands-on experiments with the Gemini API: text-to-speech voice generation, Veo 3.1 video keyframe synthesis, and real-time Google Maps grounding.
             </p>
           </div>
 

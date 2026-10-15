@@ -67,7 +67,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "AI Automation",
     featured: true,
     description:
-      "An automated content intelligence engine that ingests technical research feeds (arXiv, GitHub Trending, engineering blogs), deduplicates articles, extracts semantic breakthroughs with Gemini, formats responsive HTML templates, and dispatches scheduled newsletters.",
+      "An automated content intelligence engine that ingests technical research feeds (arXiv, GitHub Trending, engineering blogs), deduplicates articles, summarizes key points with an LLM, formats responsive HTML templates, and dispatches scheduled newsletters.",
     achievements: [
       "Gathers articles from technical feeds and pages as the workflow's input.",
       "Multi-step LLM prompts produce short summaries and takeaways.",
@@ -78,7 +78,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: "#demo-newsletter-pipeline",
     demoLabel: "Pipeline Demo",
     mockupType: "newsletter-pipeline",
-    architectureHighlights: "Multi-stage pipeline: Scheduled feed polling -> semantic relevance filtering -> Gemini summarization -> HTML template rendering -> batch email dispatch.",
+    architectureHighlights: "Demo: runs with a mock LLM by default for the walkthrough. Multi-stage pipeline: Scheduled feed polling -> semantic relevance filtering -> Gemini summarization -> HTML template rendering -> batch email dispatch.",
   },
   {
     id: "pdf-data-extraction-ocr",
@@ -98,7 +98,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: "#demo-ocr-scanner",
     demoLabel: "OCR Processing Demo",
     mockupType: "ocr-scanner",
-    architectureHighlights: "Multi-stage pipeline: PDF rasterization, optical character recognition filtering, structured tabular data parsing, and automated Excel export.",
+    architectureHighlights: "Demo walkthrough uses sample documents. Multi-stage pipeline: PDF rasterization, optical character recognition filtering, structured tabular data parsing, and automated Excel export.",
   },
   {
     id: "web-application-aws-serverless",
@@ -118,7 +118,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: "#demo-aws-serverless",
     demoLabel: "Cloud Architecture View",
     mockupType: "aws-cloud",
-    architectureHighlights: "Zero-server footprint architecture with fine-grained IAM execution policies and managed AWS cloud scaling.",
+    architectureHighlights: "Demo walkthrough of a learning project: serverless architecture using AWS Lambda, API Gateway, DynamoDB and S3 with IAM execution roles.",
   },
   {
     id: "amazon-cloud-development",
@@ -138,7 +138,7 @@ export const PROJECTS: ProjectItem[] = [
     demoUrl: "#demo-amazon-cloud",
     demoLabel: "VPC Topology Diagram",
     mockupType: "aws-cloud",
-    architectureHighlights: "Well-Architected AWS framework emphasizing security isolation, network routing, and scalable compute.",
+    architectureHighlights: "Learning project covering VPC networking, IAM policies, and EC2 setup.",
   },
   {
     id: "personal-portfolio-scratch",
@@ -194,7 +194,7 @@ export const PROJECTS: ProjectItem[] = [
       "Active development repository tracking progress on GitHub.",
     ],
     technologies: ["Gemini 3 SDK", "Python", "TypeScript", "Node.js", "Express", "Agentic Workflows"],
-    githubUrl: "https://github.com/bharatkumar00797?tab=repositories",
+    githubUrl: "https://github.com/bharatkumar00797/devpilot-ai-swe-agent",
     demoUrl: "#demo-agent-orchestrator",
     demoLabel: "Interactive Tool Calling Trace",
     mockupType: "agent-orchestrator",
@@ -219,7 +219,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "tanmay-travels",
-    role: "Relationship Manager (Technical Operations & Reporting)",
+    role: "Relationship Manager",
     company: "Tanmay Travels",
     period: "November 2024 – August 2026",
     duration: "1 year 10 months",
@@ -230,6 +230,19 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Ensured smooth day-to-day technical operations with timely and accurate reporting.",
     ],
     technologies: ["Reporting Systems", "Technical Operations", "Ticket Management", "System Configuration"],
+  },
+  {
+    id: "craig-spodak",
+    role: "Freelance Graphic Designer",
+    company: "Craig Spodak",
+    period: "June 2024",
+    duration: "1 month",
+    location: "Delray Beach, Florida, United States",
+    type: "Business Card Design",
+    bullets: [
+      "Designed business cards for a freelance client using Adobe Illustrator, Photoshop and InDesign.",
+    ],
+    technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
   },
   {
     id: "claire-beauty",
@@ -252,7 +265,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     company: "Ression",
     period: "May 2022 – December 2022",
     duration: "8 months",
-    location: "Fredericton, NL, Canada",
+    location: "Fredericton, NB, Canada",
     type: "Software Engineering",
     bullets: [
       "Developed and maintained software applications in C#, .NET, and Xamarin alongside senior developers — clean, documented, standards-compliant code.",
@@ -346,7 +359,7 @@ export const SKILL_CATEGORIES = [
   },
   {
     category: "Databases & Data Analytics",
-    skills: ["PostgreSQL & MySQL", "SQL Query Optimization", "Window Functions & Indexing", "Database Normalization", "Google Data Analytics", "Dynamic Excel Dashboards"],
+    skills: ["MySQL", "SQL Query Optimization", "Window Functions & Indexing", "Database Normalization", "Google Data Analytics", "Dynamic Excel Dashboards"],
   },
   {
     category: "Deployment & Operations",
@@ -375,7 +388,7 @@ export const AUDIO_SCRIPTS = [
     id: "kyc-compliance",
     title: "KYC Validation Experience",
     duration: "40 sec",
-    text: "For nearly four years at Pi Network, I worked as a freelance KYC Validator, reviewing identity documents against KYC requirements. This experience gave me a deep understanding of document integrity, visual tampering, and security edge cases — insights I now bring into multimodal AI vision pipelines and identity automation.",
+    text: "For 3+ years at Pi Network, I worked as a freelance KYC Validator, reviewing identity documents against KYC requirements. This experience gave me a deep understanding of document integrity, visual tampering, and security edge cases — insights I now bring into multimodal AI vision pipelines and identity automation.",
   },
 ];
 

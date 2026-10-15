@@ -106,8 +106,7 @@ export const Hero: React.FC<HeroProps> = ({
                   isDark ? "text-zinc-200" : "text-zinc-800"
                 }`}
               >
-                Full-Stack Developer & AI Systems Builder —
-                Next.js, FastAPI, Python OCR pipelines, and AWS Serverless architectures.
+                Full-Stack Developer Transitioning into AI Engineering
               </p>
             </div>
 
@@ -117,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({
                 isDark ? "text-zinc-400" : "text-zinc-700"
               }`}
             >
-              Full-stack developer (Python, .NET, SQL, WordPress) moving into AI engineering. I build AI agent projects in public on GitHub, including an incident-response agent demo, an agent governance dashboard (Next.js, FastAPI, SQLAlchemy), and a newsletter automation workflow. Background includes nearly four years as a freelance KYC Validator at Pi Network, technical operations and reporting work, and a Graduate Certificate in Project Management from Loyalist College (Canada).
+              Full-stack developer (Python, .NET, SQL, WordPress) transitioning into AI engineering. I build AI agent projects in public on GitHub, including an incident-response agent demo, an agent governance dashboard (Next.js, FastAPI, SQLAlchemy), and a newsletter automation workflow. Background includes 3+ years as a freelance KYC Validator at Pi Network, technical operations and reporting work, and a Graduate Certificate in Project Management from Loyalist College (Canada).
             </p>
 
             {/* Primary Action Buttons */}
@@ -286,7 +285,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <div>
                   <div className="text-[10px] uppercase font-bold text-zinc-500">Core Stack</div>
                   <div className="font-semibold text-sm mt-0.5">
-                    Python · Next.js · FastAPI · AWS · .NET 8
+                    Python · .NET · SQL · WordPress · Next.js/FastAPI (projects)
                   </div>
                 </div>
 

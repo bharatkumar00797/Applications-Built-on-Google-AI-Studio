@@ -11,7 +11,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({ theme }) => {
 
   const tickerItems = [
     { text: "AUTONOMOUS AI AGENTS", icon: Cpu },
-    { text: "GEMINI 3.8 & PRO PREVIEW", icon: Sparkles },
+    { text: "GEMINI API", icon: Sparkles },
     { text: ".NET 8 WEB APIS & C#", icon: Terminal },
     { text: "PYTHON LLM PIPELINES", icon: Cpu },
     { text: "KYC VALIDATION", icon: ShieldCheck },

@@ -403,7 +403,7 @@ export const VeoVideoGenerator: React.FC<VeoVideoGeneratorProps> = ({ theme }) =
                     : "bg-purple-100 border-purple-300 text-purple-900"
                 }`}
               >
-                veo-3.1-fast-generate-preview
+                veo-3.1-lite-generate-preview
               </span>
             </div>
             <p className={`text-xs ${isDark ? "text-zinc-400" : "text-zinc-600"}`}>

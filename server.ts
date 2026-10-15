@@ -93,12 +93,25 @@ const RESUME_DATA = {
       period: "November 2024 - August 2026",
       duration: "1 year 10 months",
       location: "Nadiad, Gujarat, India",
-      type: "Technical Support & Operations",
+      type: "Technical Operations & Reporting",
       bullets: [
         "Installed, configured, and updated reporting systems; resolved user complaints and provided solutions to internally raised tickets.",
         "Ensured smooth day-to-day technical operations with timely and accurate reporting.",
       ],
       technologies: ["Reporting Systems", "Ticket Management", "Workflow Automation", "Data Reconciliation"],
+    },
+    {
+      id: "craig-spodak",
+      role: "Freelance Graphic Designer",
+      company: "Craig Spodak",
+      period: "June 2024",
+      duration: "1 month",
+      location: "Delray Beach, Florida, United States",
+      type: "Business Card Design",
+      bullets: [
+        "Designed business cards for a freelance client using Adobe Illustrator, Photoshop and InDesign.",
+      ],
+      technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
     },
     {
       id: "claire-beauty",
@@ -114,19 +127,6 @@ const RESUME_DATA = {
         "Improved search visibility through SEO (Yoast) and content optimization; delivered Google Analytics performance reports to the client.",
       ],
       technologies: ["WordPress", "PHP", "JavaScript", "Yoast SEO", "Google Analytics", "MySQL"],
-    },
-    {
-      id: "craig-spodak",
-      role: "Freelance Graphic Designer",
-      company: "CRAIG SPODAK",
-      period: "June 2024 - June 2024",
-      duration: "1 month",
-      location: "Delray Beach, Florida, United States",
-      type: "Business Card Design",
-      bullets: [
-        "Designed business cards for a freelance client using Adobe Illustrator, Photoshop and InDesign.",
-      ],
-      technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
     },
     {
       id: "pi-network",
@@ -215,15 +215,15 @@ app.post("/api/chat", async (req, res) => {
 
     // Model selection based on requirements:
     // - gemini-3.1-pro-preview for particularly complex tasks
-    // - gemini-3.5-flash for general tasks
+    // - gemini-3.8-flash for general tasks
     // - gemini-3.1-flash-lite for tasks that should happen fast
-    let chosenModel = "gemini-3.5-flash";
+    let chosenModel = "gemini-3.8-flash";
     if (modelPreference === "gemini-3.1-pro-preview" || taskType === "complex") {
       chosenModel = "gemini-3.1-pro-preview";
     } else if (modelPreference === "gemini-3.1-flash-lite" || taskType === "fast") {
       chosenModel = "gemini-3.1-flash-lite";
-    } else if (modelPreference === "gemini-3.5-flash") {
-      chosenModel = "gemini-3.5-flash";
+    } else if (modelPreference === "gemini-3.8-flash") {
+      chosenModel = "gemini-3.8-flash";
     }
 
     const systemInstruction = `You are the Career Assistant on Bharatkumar Chandvani's portfolio.
@@ -239,10 +239,10 @@ Profile Summary:
 - Transition Story: Full-stack developer with solid foundations in Python, .NET (C#), SQL, and WordPress, actively transitioning into hands-on AI engineering. Builds autonomous AI agents, tool-calling pipelines, prompt architectures, and multimodal systems deployed on Railway and Vercel.
 
 Work Experience:
-1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project is not deployed live.
+1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project has a public demo on Vercel where all actions are simulated.
 2. Tanmay Travels (Relationship Manager, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
-3. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
-4. CRAIG SPODAK (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
+3. Craig Spodak (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
+4. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
 5. Pi Network (KYC Validator, freelance, July 2020 - Mar 2024): reviewed user identity documents against KYC requirements.
 6. Ression (Junior Web Developer, May 2022 - Dec 2022): C#, .NET, Xamarin, SQL, REST APIs, Git, unit testing.
 7. Loyalist College (Project Coordinator, Jan 2022 - Apr 2022): Excel dashboards, GIS evaluation (ArcGIS vs QGIS).
@@ -278,16 +278,16 @@ Tone & Guidelines:
       });
     } catch {
       try {
-        // Fallback to gemini-3.5-flash
+        // Fallback to gemini-3.8-flash
         response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-3.8-flash",
           contents,
           config: {
             systemInstruction,
             temperature: 0.7,
           },
         });
-        chosenModel = "gemini-3.5-flash (fallback)";
+        chosenModel = "gemini-3.8-flash (fallback)";
       } catch {
         try {
           // Fallback to gemini-3.1-flash-lite
@@ -414,7 +414,7 @@ app.post("/api/tts", async (req, res) => {
   }
 });
 
-// Veo 3.1 Fast Video Generation Endpoints (model: veo-3.1-fast-generate-preview)
+// Veo 3.1 Lite Video Generation Endpoints (model: veo-3.1-lite-generate-preview)
 app.post("/api/generate-video", async (req, res) => {
   try {
     const {
@@ -439,7 +439,7 @@ app.post("/api/generate-video", async (req, res) => {
 
     try {
       const operation = await ai.models.generateVideos({
-        model: "veo-3.1-fast-generate-preview",
+        model: "veo-3.1-lite-generate-preview",
         prompt,
         image: {
           imageBytes: cleanBase64,
@@ -539,7 +539,7 @@ app.post("/api/video-download", async (req, res) => {
   }
 });
 
-// Google Maps Grounding Endpoint (model: gemini-3.5-flash with googleMaps tool)
+// Google Maps Grounding Endpoint (model: gemini-3.8-flash with googleMaps tool)
 app.post("/api/maps-query", async (req, res) => {
   try {
     const { query } = req.body;
@@ -549,11 +549,11 @@ app.post("/api/maps-query", async (req, res) => {
 
     let text = "";
     let groundingMetadata;
-    let modelUsed = "gemini-3.5-flash (with googleMaps tool)";
+    let modelUsed = "gemini-3.8-flash (with googleMaps tool)";
 
     try {
       const response = await ai.models.generateContent({
-        model: "gemini-3.5-flash",
+        model: "gemini-3.8-flash",
         contents: prompt,
         config: {
           tools: [{ googleMaps: {} }],

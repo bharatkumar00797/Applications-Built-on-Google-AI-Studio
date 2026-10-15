@@ -50,7 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               isDark ? "text-zinc-400" : "text-zinc-600"
             }`}
           >
-            Full Stack Developer & AI Systems
+            Full-Stack Developer · AI Engineering
           </span>
         </a>
 

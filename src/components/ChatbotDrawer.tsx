@@ -27,7 +27,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
   theme,
 }) => {
   const isDark = theme === "dark";
-  const [modelOption, setModelOption] = useState<GeminiModelOption>("gemini-3.5-flash");
+  const [modelOption, setModelOption] = useState<GeminiModelOption>("gemini-3.8-flash");
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -38,7 +38,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
       role: "model",
       content:
         "Hello! I am Bharatkumar Chandvani's Career Assistant. I have full context on Bharat's technical background — including his featured projects (Agent Governance Dashboard, AI Newsletter Pipeline, OCR Extraction, AWS Serverless), his 3.7+ years in KYC verification at Pi Network, and project management credentials from Canada. How can I help evaluate his fit for your team?",
-      modelUsed: "gemini-3.5-flash",
+      modelUsed: "gemini-3.8-flash",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
@@ -248,9 +248,9 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
 
             <button
               type="button"
-              onClick={() => setModelOption("gemini-3.5-flash")}
+              onClick={() => setModelOption("gemini-3.8-flash")}
               className={`px-2 py-1 text-[11px] font-medium rounded transition-colors ${
-                modelOption === "gemini-3.5-flash"
+                modelOption === "gemini-3.8-flash"
                   ? isDark
                     ? "bg-blue-950 border border-blue-600 text-blue-300 font-semibold"
                     : "bg-blue-100 border border-blue-500 text-blue-900 font-semibold"

@@ -107,9 +107,9 @@ export const PROJECTS: ProjectItem[] = [
     category: "Cloud & AWS",
     featured: true,
     description:
-      "A scalable serverless cloud application architecture hosted on Amazon Web Services. Employs AWS Lambda microservices for compute, API Gateway for secure REST endpoints, DynamoDB for NoSQL persistence, and S3 for static assets.",
+      "A learning project: a serverless web application on Amazon Web Services, using AWS Lambda functions for compute, API Gateway for secure REST endpoints, DynamoDB for NoSQL persistence, and S3 for static assets.",
     achievements: [
-      "Designed decoupled serverless cloud architecture eliminating dedicated server idle costs and auto-scaling on demand.",
+      "Built a serverless backend with no dedicated servers to manage, using managed AWS services.",
       "Implemented secure API Gateway routing with AWS Lambda functions handling backend request execution.",
       "Configured S3 bucket policies and DynamoDB tables for fast key-value data retrieval.",
     ],

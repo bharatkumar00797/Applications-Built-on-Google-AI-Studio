@@ -196,7 +196,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
                     </div>
                     <div className="grid grid-cols-12 p-2 border-b border-zinc-800/60 items-center">
                       <span className="col-span-4 font-semibold text-white">doc-verifier-agent-v2</span>
-                      <span className="col-span-3 text-zinc-300">gemini-3.5-flash</span>
+                      <span className="col-span-3 text-zinc-300">gemini-3.8-flash</span>
                       <span className="col-span-3 text-zinc-400">ocr_read, hash_check</span>
                       <span className="col-span-2 text-right text-emerald-400">● Operational</span>
                     </div>

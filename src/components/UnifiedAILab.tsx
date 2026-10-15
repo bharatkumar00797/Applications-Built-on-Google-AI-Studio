@@ -138,7 +138,7 @@ export const UnifiedAILab: React.FC<UnifiedAILabProps> = ({ theme }) => {
               >
                 <div className="flex items-center gap-2">
                   <Info className="w-4 h-4 text-purple-500 shrink-0" />
-                  <span>Generative Video Sandbox: Animate architectural blueprints or uploaded photos using <code className="font-mono text-purple-500 font-semibold">veo-3.1-fast-generate-preview</code>.</span>
+                  <span>Generative Video Sandbox: Animate architectural blueprints or uploaded photos using <code className="font-mono text-purple-500 font-semibold">veo-3.1-lite-generate-preview</code>.</span>
                 </div>
                 <span className="text-[11px] font-mono shrink-0 hidden sm:inline">On-Demand Synthesis</span>
               </div>
@@ -153,7 +153,7 @@ export const UnifiedAILab: React.FC<UnifiedAILabProps> = ({ theme }) => {
                   isDark ? "bg-zinc-950/80 border-zinc-800 text-zinc-400" : "bg-zinc-50 border-zinc-200 text-zinc-600"
                 }`}
               >
-                <span>Geographic Grounding: Real-time location intelligence via <code className="font-mono text-amber-500 font-semibold">gemini-3.5-flash</code> and Google Maps.</span>
+                <span>Geographic Grounding: Real-time location intelligence via <code className="font-mono text-amber-500 font-semibold">gemini-3.8-flash</code> and Google Maps.</span>
                 <span className="text-[11px] font-mono">Transit & Tech Corridors</span>
               </div>
               <MapsGrounding theme={theme} />

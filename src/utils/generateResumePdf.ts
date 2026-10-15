@@ -36,23 +36,21 @@ export const generateResumePdf = () => {
   doc.text("Nadiad, Gujarat, India  |  +91 72839 61105  |  Chandvanibharat@gmail.com", pageWidth / 2, y, { align: "center" });
   y += 14;
 
-  // Links line (LeetCode | GitHub | LinkedIn)
+  // Links line (GitHub | LinkedIn)
   doc.setFont("times", "normal");
   doc.setFontSize(9.5);
   doc.setTextColor(37, 99, 235); // blue-600
-  const linksText = "LeetCode  |  GitHub  |  LinkedIn";
+  const linksText = "GitHub  |  LinkedIn";
   doc.text(linksText, pageWidth / 2, y, { align: "center" });
 
   // Add clickable links over the text
   const linksWidth = doc.getTextWidth(linksText);
   const startLinksX = (pageWidth - linksWidth) / 2;
-  const leetWidth = doc.getTextWidth("LeetCode");
   const sepWidth = doc.getTextWidth("  |  ");
   const gitWidth = doc.getTextWidth("GitHub");
 
-  doc.link(startLinksX, y - 9, leetWidth, 12, { url: "https://leetcode.com" });
-  doc.link(startLinksX + leetWidth + sepWidth, y - 9, gitWidth, 12, { url: "https://github.com/bharatkumar00797" });
-  doc.link(startLinksX + leetWidth + sepWidth + gitWidth + sepWidth, y - 9, doc.getTextWidth("LinkedIn"), 12, { url: "https://www.linkedin.com/in/bharat-chandvani/" });
+  doc.link(startLinksX, y - 9, gitWidth, 12, { url: "https://github.com/bharatkumar00797" });
+  doc.link(startLinksX + gitWidth + sepWidth, y - 9, doc.getTextWidth("LinkedIn"), 12, { url: "https://www.linkedin.com/in/bharat-chandvani/" });
 
   y += 16;
 
@@ -161,7 +159,26 @@ export const generateResumePdf = () => {
   addBullet("Ensured smooth day-to-day technical operations with timely and accurate reporting.");
   y += 4;
 
-  // Experience 3: WordPress Developer
+  // Experience 3: Freelance Graphic Designer
+  doc.setFont("times", "bold");
+  doc.setFontSize(9.5);
+  doc.setTextColor(15, 23, 42);
+  doc.text("Freelance Graphic Designer", margin, y);
+  y += 11;
+
+  doc.setFont("times", "italic");
+  doc.setFontSize(9);
+  doc.setTextColor(71, 85, 105);
+  doc.text("Craig Spodak  |  Delray Beach, Florida, United States", margin, y);
+  doc.setFont("times", "normal");
+  const dateSpodak = "Jun 2024";
+  doc.text(dateSpodak, margin + contentWidth - doc.getTextWidth(dateSpodak), y);
+  y += 11;
+
+  addBullet("Designed business cards for a freelance client using Adobe Illustrator, Photoshop and InDesign.");
+  y += 4;
+
+  // Experience 3b: WordPress Developer
   doc.setFont("times", "bold");
   doc.setFontSize(9.5);
   doc.setTextColor(15, 23, 42);

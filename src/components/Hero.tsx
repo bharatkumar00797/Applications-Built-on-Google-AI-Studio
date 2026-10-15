@@ -194,7 +194,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   type="button"
                   onClick={() => copyToClipboard(PROFILE_INFO.contact.email, "email")}
-                  className="p-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-2 -m-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                   title="Copy email to clipboard"
                   aria-label="Copy email address"
                 >
@@ -219,7 +219,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   type="button"
                   onClick={() => copyToClipboard(PROFILE_INFO.contact.phone, "phone")}
-                  className="p-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-2 -m-1 rounded hover:bg-zinc-500/15 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                   title="Copy phone to clipboard"
                   aria-label="Copy phone number"
                 >

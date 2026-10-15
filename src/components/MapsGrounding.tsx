@@ -33,7 +33,7 @@ export const MapsGrounding: React.FC<MapsGroundingProps> = ({ theme }) => {
   const [customQuery, setCustomQuery] = useState("");
   const [isQuerying, setIsQuerying] = useState(false);
   const [groundedText, setGroundedText] = useState<string | null>(null);
-  const [modelUsed, setModelUsed] = useState<string>("gemini-3.5-flash (with googleMaps)");
+  const [modelUsed, setModelUsed] = useState<string>("gemini-3.8-flash (with googleMaps)");
 
   const presetQueries = [
     {
@@ -94,7 +94,7 @@ export const MapsGrounding: React.FC<MapsGroundingProps> = ({ theme }) => {
                   isDark ? "bg-zinc-950 border-zinc-800 text-amber-300" : "bg-amber-50 border-amber-300 text-amber-800"
                 }`}
               >
-                gemini-3.5-flash + googleMaps
+                gemini-3.8-flash + googleMaps
               </span>
             </h2>
             <p className={`text-xs ${isDark ? "text-zinc-400" : "text-zinc-600"}`}>

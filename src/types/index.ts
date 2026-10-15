@@ -60,7 +60,7 @@ export interface ChatMessage {
   timestamp: string;
 }
 
-export type GeminiModelOption = "gemini-3.1-pro-preview" | "gemini-3.5-flash" | "gemini-3.1-flash-lite";
+export type GeminiModelOption = "gemini-3.1-pro-preview" | "gemini-3.8-flash" | "gemini-3.1-flash-lite";
 
 export interface ImageAnalysisPreset {
   id: string;

@@ -174,7 +174,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                           <span>Cloud Topology</span>
                           <span className="text-sky-400">AWS Lambda + DynamoDB</span>
                         </div>
-                        <div className="text-zinc-500">Decoupled serverless auto-scaling microservices</div>
+                        <div className="text-zinc-500">Lambda + API Gateway + DynamoDB + S3 (learning project)</div>
                       </div>
                     )}
 

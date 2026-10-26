@@ -82,6 +82,22 @@ export const PROJECTS: ProjectItem[] = [
     architectureHighlights: "Demo: runs with a mock LLM by default for the walkthrough. Multi-stage pipeline: Scheduled feed polling -> semantic relevance filtering -> Gemini summarization -> HTML template rendering -> batch email dispatch.",
   },
   {
+    id: "krishnapriya-shopify-store",
+    title: "KrishnaPriya Shopify Store",
+    tagline: "Shopify store built with Claude and run day to day with a team of AI agents",
+    category: "AI Automation",
+    featured: false,
+    description:
+      "Shopify store built with Claude and operated by a team of AI agents for product research, SEO, orders and customer care.",
+    achievements: [
+      "Set up the store with Claude: catalogue of 33 products (20 active, 13 in draft) priced in INR.",
+      "Runs day to day with a team of Grok Bot AI agents covering product finding, SEO, orders, customer care and admin.",
+    ],
+    technologies: ["Shopify", "Claude", "Grok Bot", "AI Agents"],
+    githubUrl: "",
+    architectureHighlights: "Shopify store managed by separate AI agents per task (products, SEO, orders, customer care, admin) through the Shopify connector.",
+  },
+  {
     id: "agentic-workflow-engine",
     title: "Agent Tool-Calling Prototype (In Progress)",
     tagline: "Experimental prototype exploring multi-turn reasoning and dynamic tool execution",

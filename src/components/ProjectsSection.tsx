@@ -242,6 +242,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     <span>View Demo</span>
                   </button>
 
+                  {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -253,6 +254,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     <Github className="w-3.5 h-3.5" />
                     <span>GitHub</span>
                   </a>
+                  )}
 
                   {project.liveUrl && (
                     <a

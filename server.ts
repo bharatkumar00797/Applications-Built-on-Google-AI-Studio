@@ -239,7 +239,7 @@ Profile Summary:
 - Transition Story: Full-stack developer with solid foundations in Python, .NET (C#), SQL, and WordPress, actively transitioning into hands-on AI engineering. Builds autonomous AI agents, tool-calling pipelines, prompt architectures, and multimodal systems deployed on Railway and Vercel.
 
 Work Experience:
-1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow. The deterministic-support-agent project has a public demo on Vercel where all actions are simulated.
+1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow.
 2. Tanmay Travels (Relationship Manager, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
 3. Craig Spodak (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
 4. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.

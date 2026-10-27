@@ -233,6 +233,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 }`}
               >
                 <div className="flex items-center gap-3">
+                  {(project.demoUrl || project.mockupType) && (
                   <button
                     type="button"
                     onClick={() => setActiveModalProject(project)}
@@ -241,6 +242,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     <Play className="w-3 h-3 fill-current" />
                     <span>View Demo</span>
                   </button>
+                  )}
 
                   {project.githubUrl && (
                   <a

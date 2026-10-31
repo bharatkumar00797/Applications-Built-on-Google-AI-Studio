@@ -106,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({
                   isDark ? "text-zinc-200" : "text-zinc-800"
                 }`}
               >
-                Full-Stack Developer Transitioning into AI Engineering
+                Full-Stack Developer & AI Systems Builder: Python, FastAPI, Next.js and tested AI-agent demos
               </p>
             </div>
 
@@ -292,7 +292,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <div>
                   <div className="text-[10px] uppercase font-bold text-zinc-500">Key Projects</div>
                   <div className="font-medium mt-0.5 leading-snug">
-                    Incident Commander AI (demo), Agent Governance Dashboard, Newsletter Automation, OCR Extraction
+                    Incident Commander AI (demo), Agent Governance Dashboard, Newsletter Automation, AgentGuard, FraudSentinel AI
                   </div>
                 </div>
 

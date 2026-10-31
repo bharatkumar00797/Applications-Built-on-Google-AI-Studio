@@ -26,7 +26,7 @@ export const generateResumePdf = () => {
   doc.setFont("times", "italic");
   doc.setFontSize(10.5);
   doc.setTextColor(51, 65, 85);
-  doc.text("Full-Stack Developer  |  Transitioning into AI Engineering  |  Technical Support", pageWidth / 2, y, { align: "center" });
+  doc.text("Full-Stack Developer & AI Systems Builder: Python, FastAPI, Next.js and tested AI-agent demos", pageWidth / 2, y, { align: "center" });
   y += 15;
 
   // Contact line
@@ -92,11 +92,11 @@ export const generateResumePdf = () => {
   // 2. TECHNICAL SKILLS
   addSectionTitle("Technical Skills");
   const skillsList = [
-    { label: "AI & LLMs", text: "Prompt Engineering, AI Agents, LLM tool/function calling, structured output (Pydantic), agent evaluation, OpenAI/Anthropic APIs, RAG fundamentals" },
+    { label: "AI & LLMs", text: "Prompt Engineering, AI Agents, LLM tool/function calling, structured output (Pydantic), agent evaluation, OpenAI/Anthropic APIs" },
     { label: "Languages", text: "Python, C#, JavaScript, PHP, SQL" },
     { label: "Frameworks & Tools", text: "v0, Railway.app, .NET, Xamarin, WordPress, Git, REST APIs" },
     { label: "Databases", text: "SQL (Advanced), MySQL, database design and optimization" },
-    { label: "Cloud", text: "AWS Lambda, API Gateway, DynamoDB, S3, EC2, VPC, IAM" },
+    { label: "Cloud", text: "AWS Lambda, DynamoDB, S3 (tutorial project)" },
     { label: "Certifications", text: "Google Data Analytics, CyberSecurity Foundations, SQL Advanced" },
   ];
 

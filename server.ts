@@ -30,7 +30,7 @@ const ai = new GoogleGenAI({
 const RESUME_DATA = {
   fullName: "Bharatkumar Chandvani",
   preferredName: "Bharat Chandvani",
-  headline: "Full-Stack Developer | Transitioning into AI Engineering | Technical Support",
+  headline: "Full-Stack Developer & AI Systems Builder: Python, FastAPI, Next.js and tested AI-agent demos",
   location: "Nadiad, Gujarat, India",
   contact: {
     phone: "+91 7283961105",
@@ -231,7 +231,7 @@ Your role: Represent Bharatkumar (Bharat) Chandvani with accurate, professional,
 
 Profile Summary:
 - Full Name: Bharatkumar Chandvani (Bharat Chandvani)
-- Title: Full-Stack Developer | Transitioning into AI Engineering | Technical Support
+- Title: Full-Stack Developer & AI Systems Builder: Python, FastAPI, Next.js and tested AI-agent demos
 - Location: Nadiad, Gujarat, India (Open to remote roles globally, junior AI/ML, and full-stack positions)
 - Contact: Chandvanibharat@gmail.com | Phone: +91 7283961105
 - LinkedIn: https://www.linkedin.com/in/bharat-chandvani/
@@ -305,7 +305,7 @@ Tone & Guidelines:
           return res.json({
             role: "model",
             content:
-              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He builds AI agent projects in Python, has worked with AWS Serverless, C# and .NET, and spent 3+ years as a freelance KYC Validator at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
+              "Bharatkumar Chandvani is an AI Engineer and Full Stack Developer based in Nadiad, Gujarat. He builds AI agent demos in Python with FastAPI and Next.js, has worked with C# and .NET, and spent 3+ years as a freelance KYC Validator at Pi Network. He is available for junior AI/ML and full-stack engineering roles (remote/hybrid).",
             modelUsed: "Career Assistant (offline answer)",
           });
         }

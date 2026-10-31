@@ -51,6 +51,7 @@ export interface ProjectItem {
   demoUrl?: string;
   demoLabel?: string;
   earlier?: boolean;
+  links?: { label: string; url: string }[];
 }
 
 export interface ChatMessage {

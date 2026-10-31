@@ -3,7 +3,7 @@ import { ExperienceItem, EducationItem, CertificationItem, ProjectItem, ImageAna
 export const PROFILE_INFO = {
   name: "Bharatkumar Chandvani",
   shortName: "Bharat Chandvani",
-  title: "Full-Stack Developer | Transitioning into AI Engineering | Technical Support",
+  title: "Full-Stack Developer & AI Systems Builder: Python, FastAPI, Next.js and tested AI-agent demos",
   location: "Nadiad, Gujarat, India",
   headline: "Building Autonomous AI Agents, Full-Stack Applications & Portfolio Projects",
   summary:
@@ -96,6 +96,77 @@ export const PROJECTS: ProjectItem[] = [
     technologies: ["Shopify", "Claude", "Grok Bot", "AI Agents"],
     githubUrl: "",
     architectureHighlights: "Shopify store managed by separate AI agents per task (products, SEO, orders, customer care, admin) through the Shopify connector.",
+  },
+  {
+    id: "modernize-ai-legacy-code",
+    title: "Modernize AI - Legacy Code Modernization Agent",
+    tagline: "Agent that refactors legacy Python with allowlisted transforms and keeps a change only if tests still pass",
+    category: "AI Automation",
+    featured: false,
+    description:
+      "Rule-based smell detection plus LLM-ranked, allowlisted Python refactors, applied in a sandbox and kept only when the existing test suite stays green. Runs offline with a mock LLM provider by default.",
+    achievements: [
+      "Token and AST detectors for 18 smell kinds, including ones that work on unparseable Python 2 sources.",
+      "Keep/revert loop: detect, rank, transform, run tests, then keep or revert each step.",
+      "Released v1.0.0 on GitHub with CI.",
+    ],
+    technologies: ["Python", "FastAPI", "LLM", "Static Analysis", "Docker"],
+    githubUrl: "https://github.com/bharatkumar00797/modernize-ai-legacy-code",
+    architectureHighlights: "Deterministic analyzers produce candidates, an LLM (or fixed offline policy) ranks them, and the test suite decides what stays. Supports OpenAI-compatible APIs (OpenAI, Groq, Ollama).",
+  },
+  {
+    id: "agentguard-ai-governance",
+    title: "AgentGuard - AI Agent Security & Governance",
+    tagline: "Guard proxy that checks LLM agent prompts and tool calls against policies and logs every decision",
+    category: "AI & Governance",
+    featured: false,
+    description:
+      "Security and governance layer for LLM agents: a policy engine, prompt-injection, PII and jailbreak detectors, and a guard proxy that audits every agent tool call with a tamper-evident log.",
+    achievements: [
+      "Declarative YAML/JSON policy engine with default deny, argument constraints, rate limits and approval gates.",
+      "Audit log as JSON Lines with a SHA-256 hash chain; a verify command detects edited, deleted or reordered records.",
+      "Released v1.0.0 on GitHub with CI; CLI, REST API and dashboard.",
+    ],
+    technologies: ["Python", "FastAPI", "LLM Security", "Policy Engine", "Docker"],
+    githubUrl: "https://github.com/bharatkumar00797/agentguard-ai-governance",
+    architectureHighlights: "Every prompt, tool result, proposed tool call and final answer passes one check point. Runs offline with a mock model or against an OpenAI-compatible LLM.",
+  },
+  {
+    id: "fraudsentinel-ai-risk-agent",
+    title: "FraudSentinel AI - Risk & Fraud Agent",
+    tagline: "Fraud screening agent: explainable rules, anomaly scoring and an LLM investigator that drafts case files",
+    category: "AI Automation",
+    featured: false,
+    description:
+      "Screens payment transactions for fraud and money laundering. A rule and anomaly-based risk engine scores each transaction; risky cases go to an LLM investigator with read-only tools that drafts a case file. Runs offline with a mock LLM.",
+    achievements: [
+      "19 named rules with reason codes, weights and evidence strings, combined into a 0-100 score.",
+      "Behavioural features computed only from history before each transaction.",
+      "Released v1.0.0 on GitHub with CI.",
+    ],
+    technologies: ["Python", "FastAPI", "LLM", "Anomaly Detection", "Docker"],
+    githubUrl: "https://github.com/bharatkumar00797/fraudsentinel-ai-risk-agent",
+    architectureHighlights: "Deterministic scoring first, an investigator with least-privilege tools, and a policy gate that makes the final decision.",
+  },
+  {
+    id: "open-source-contributions",
+    title: "Open-Source Contributions",
+    tagline: "Merged pull requests to other projects on GitHub",
+    category: "Full-Stack",
+    featured: false,
+    description:
+      "Merged pull requests to AyiPM (people and project management app) and folio.",
+    achievements: [
+      "mahfoos/AyiPM #71 (merged): added a copy button next to the employee ID on member profiles; closes #37.",
+      "Sall25/folio #70 (merged): removed leftover console.log calls, sent real failures to console.error/warn, and added a no-console lint rule; closes #34.",
+    ],
+    technologies: ["TypeScript", "Next.js", "ESLint", "Git"],
+    githubUrl: "",
+    links: [
+      { label: "AyiPM PR #71", url: "https://github.com/mahfoos/AyiPM/pull/71" },
+      { label: "folio PR #70", url: "https://github.com/Sall25/folio/pull/70" },
+    ],
+    architectureHighlights: "Small, focused pull requests merged by the maintainers.",
   },
   {
     id: "agentic-workflow-engine",
@@ -237,7 +308,7 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).",
       "Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.",
     ],
-    technologies: ["Python", "AI Agents", "LLM Tool Calling", "Pydantic", "Railway.app", "Vercel", "RAG"],
+    technologies: ["Python", "AI Agents", "LLM Tool Calling", "Pydantic", "Railway.app", "Vercel"],
   },
   {
     id: "tanmay-travels",

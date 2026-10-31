@@ -258,6 +258,21 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </a>
                   )}
 
+                  {project.links?.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`inline-flex items-center gap-1.5 py-3 font-semibold transition-colors hover:text-blue-600 ${
+                        isDark ? "text-zinc-300" : "text-zinc-800"
+                      }`}
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      <span>{link.label}</span>
+                    </a>
+                  ))}
+
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}

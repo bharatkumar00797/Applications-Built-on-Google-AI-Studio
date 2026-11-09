@@ -147,78 +147,6 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
           {activeTab === "visual" && (
             <div className="space-y-4">
               {/* Dynamic Mockup View according to Project Type */}
-              {project.id === "agent-governance-dashboard" && (
-                <div
-                  className={`rounded-lg border p-4 space-y-4 font-mono text-xs ${
-                    isDark ? "bg-zinc-900/90 border-zinc-800" : "bg-zinc-900 text-zinc-100 border-zinc-800"
-                  }`}
-                >
-                  <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-rose-500" />
-                      <div className="w-3 h-3 rounded-full bg-amber-500" />
-                      <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                      <span className="text-zinc-400 text-[11px] ml-2">agent-governance-dashboard (demo)</span>
-                    </div>
-                    <span className="px-2 py-0.5 rounded text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800">
-                      SAMPLE DATA
-                    </span>
-                  </div>
-
-                  {/* Top Metric Cards */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
-                      <div className="text-[10px] text-zinc-400">REGISTERED AGENTS</div>
-                      <div className="text-lg font-bold text-white mt-1">5 Sample</div>
-                      <div className="text-[9px] text-emerald-400">Sample data</div>
-                    </div>
-                    <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
-                      <div className="text-[10px] text-zinc-400">24H TOKEN CONSUMPTION</div>
-                      <div className="text-lg font-bold text-purple-400 mt-1">Sample</div>
-                      <div className="text-[9px] text-zinc-400">Not measured</div>
-                    </div>
-                    <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
-                      <div className="text-[10px] text-zinc-400">P95 LATENCY</div>
-                      <div className="text-lg font-bold text-sky-400 mt-1">Sample</div>
-                      <div className="text-[9px] text-emerald-400">Not measured</div>
-                    </div>
-                    <div className="p-2.5 rounded bg-zinc-950/80 border border-zinc-800">
-                      <div className="text-[10px] text-zinc-400">AUDIT ANOMALIES</div>
-                      <div className="text-lg font-bold text-emerald-400 mt-1">0 Flagged</div>
-                      <div className="text-[9px] text-zinc-400">Strict RBAC active</div>
-                    </div>
-                  </div>
-
-                  {/* Agent Roster Table */}
-                  <div className="rounded border border-zinc-800 overflow-hidden text-[11px]">
-                    <div className="grid grid-cols-12 bg-zinc-950 p-2 font-bold text-zinc-400 border-b border-zinc-800">
-                      <span className="col-span-4">Agent Identifier</span>
-                      <span className="col-span-3">Primary Model</span>
-                      <span className="col-span-3">Tool Permissions</span>
-                      <span className="col-span-2 text-right">Status</span>
-                    </div>
-                    <div className="grid grid-cols-12 p-2 border-b border-zinc-800/60 items-center">
-                      <span className="col-span-4 font-semibold text-white">doc-verifier-agent-v2</span>
-                      <span className="col-span-3 text-zinc-300">gemini-3.8-flash</span>
-                      <span className="col-span-3 text-zinc-400">ocr_read, hash_check</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
-                    </div>
-                    <div className="grid grid-cols-12 p-2 border-b border-zinc-800/60 items-center">
-                      <span className="col-span-4 font-semibold text-white">news-synthesis-orchestrator</span>
-                      <span className="col-span-3 text-zinc-300">gemini-3.8-flash</span>
-                      <span className="col-span-3 text-zinc-400">rss_fetch, send_digest</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
-                    </div>
-                    <div className="grid grid-cols-12 p-2 items-center">
-                      <span className="col-span-4 font-semibold text-white">support-ticket-classifier</span>
-                      <span className="col-span-3 text-zinc-300">gemini-3.1-flash-lite</span>
-                      <span className="col-span-3 text-zinc-400">db_query, slack_alert</span>
-                      <span className="col-span-2 text-right text-emerald-400">● Sample</span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
               {project.id === "ai-newsletter-automation" && (
                 <div
                   className={`rounded-lg border p-4 space-y-4 font-mono text-xs ${
@@ -335,7 +263,7 @@ export const ProjectMockupModal: React.FC<ProjectMockupModalProps> = ({
               )}
 
               {/* Generic Visual if other project */}
-              {!["agent-governance-dashboard", "ai-newsletter-automation", "pdf-data-extraction-ocr", "web-application-aws-serverless"].includes(project.id) && (
+              {!["ai-newsletter-automation", "pdf-data-extraction-ocr", "web-application-aws-serverless"].includes(project.id) && (
                 <div
                   className={`rounded-lg border p-6 text-center space-y-3 font-mono text-xs ${
                     isDark ? "bg-zinc-900 border-zinc-800" : "bg-zinc-900 text-zinc-100 border-zinc-800"

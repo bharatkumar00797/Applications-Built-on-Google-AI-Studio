@@ -135,7 +135,7 @@ export const generateResumePdf = () => {
   y += 11;
 
   addBullet("Released v1.0.0 of ten AI-agent demo projects on GitHub, each with automated tests and CI, using offline mock LLMs by default.");
-  addBullet("Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).");
+  addBullet("Built AgentGuard, a security and governance layer for LLM agents with policy checks, detectors, and audit logging.");
   addBullet("Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.");
   y += 4;
 

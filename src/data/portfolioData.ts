@@ -21,27 +21,6 @@ export const PROFILE_INFO = {
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "agent-governance-dashboard",
-    title: "Agent Inventory & Governance Dashboard",
-    tagline: "Demo dashboard for cataloguing AI agents, with risk scoring, policies, and audit trails",
-    category: "AI & Governance",
-    featured: true,
-    description:
-      "A demo platform for discovering, monitoring, and governing AI agents: an agent inventory, risk scoring, policies, and audit trails, with sample data.",
-    achievements: [
-      "Next.js frontend showing the agent inventory, risk scores, and audit history, deployed on Vercel.",
-      "FastAPI backend with SQLAlchemy models for the agent registry and audit records, deployed on Railway.",
-      "Policy checks that flag agents breaking configured rules.",
-    ],
-    technologies: ["Next.js", "FastAPI", "SQLAlchemy", "Tailwind CSS", "Python", "Vercel", "Railway"],
-    githubUrl: "https://github.com/bharatkumar00797/agent-governance-dashboard",
-    liveUrl: "https://agent-governance-dashboard-lovat.vercel.app",
-    demoUrl: "#demo-agent-governance",
-    demoLabel: "Dashboard Demo",
-    mockupType: "governance-dashboard",
-    architectureHighlights: "Next.js client on Vercel calling a FastAPI and SQLAlchemy backend on Railway.",
-  },
-  {
     id: "incident-commander-ai",
     title: "Incident Commander AI (Simulated Environment Demo)",
     tagline: "LLM agent that triages alerts and proposes approval-gated remediation, run against a simulated environment",
@@ -387,10 +366,10 @@ export const EXPERIENCES: ExperienceItem[] = [
     type: "AI & Full-Stack Engineering",
     bullets: [
       "Released v1.0.0 of ten AI-agent demo projects on GitHub, each with automated tests and CI, using offline mock LLMs by default.",
-      "Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).",
+      "Built AgentGuard, a security and governance layer for LLM agents with policy checks, detectors, and audit logging.",
       "Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.",
     ],
-    technologies: ["Python", "AI Agents", "LLM Tool Calling", "Pydantic", "Railway.app", "Vercel"],
+    technologies: ["Python", "AI Agents", "LLM Tool Calling", "Pydantic", "FastAPI", "Vercel"],
   },
   {
     id: "tanmay-travels",

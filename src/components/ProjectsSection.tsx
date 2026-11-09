@@ -78,13 +78,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
                   {/* Visual preview content according to project */}
                   <div className="pt-2">
-                    {project.id === "agent-governance-dashboard" && (
-                      <div className="space-y-1.5 font-mono text-[11px] text-zinc-400 text-[10px]">
-                        <div>Governance dashboard demo with 5 sample agents</div>
-                        <div className="text-zinc-500">Inventory, risk scores, policies and audit trail (sample data)</div>
-                      </div>
-                    )}
-
                     {project.id === "ai-newsletter-automation" && (
                       <div className="space-y-1.5 font-mono text-[11px]">
                         <div className="flex items-center justify-between text-zinc-400 text-[10px]">
@@ -130,7 +123,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       </div>
                     )}
 
-                    {!["agent-governance-dashboard", "ai-newsletter-automation", "pdf-data-extraction-ocr", "web-application-aws-serverless", "personal-portfolio-scratch"].includes(project.id) && (
+                    {!["ai-newsletter-automation", "pdf-data-extraction-ocr", "web-application-aws-serverless", "personal-portfolio-scratch"].includes(project.id) && (
                       <div className="font-mono text-[10px] text-zinc-400 flex items-center justify-between">
                         <span>{project.tagline.slice(0, 48)}...</span>
                         <span className="text-blue-400">Click to Inspect</span>

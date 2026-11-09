@@ -37,7 +37,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({
       id: "initial-agent-msg",
       role: "model",
       content:
-        "Hello! I am Bharatkumar Chandvani's Career Assistant. I have full context on Bharat's technical background — including his featured projects (Agent Governance Dashboard, AI Newsletter Pipeline, AgentGuard, FraudSentinel AI, Modernize AI), his 3.7+ years in KYC verification at Pi Network, and project management credentials from Canada. How can I help evaluate his fit for your team?",
+        "Hello! I am Bharatkumar Chandvani's Career Assistant. I have full context on Bharat's technical background — including his featured projects (Incident Commander AI, AI Newsletter Pipeline, AgentGuard, FraudSentinel AI, Modernize AI), his 3.7+ years in KYC verification at Pi Network, and project management credentials from Canada. How can I help evaluate his fit for your team?",
       modelUsed: "gemini-3.8-flash",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },

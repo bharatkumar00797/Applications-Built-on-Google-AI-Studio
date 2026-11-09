@@ -134,7 +134,7 @@ export const generateResumePdf = () => {
   doc.text(date1, margin + contentWidth - doc.getTextWidth(date1), y);
   y += 11;
 
-  addBullet("Released four AI agent projects at v1.0.0 on GitHub, each with automated tests and CI.");
+  addBullet("Released v1.0.0 of ten AI-agent demo projects on GitHub, each with automated tests and CI, using offline mock LLMs by default.");
   addBullet("Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).");
   addBullet("Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.");
   y += 4;

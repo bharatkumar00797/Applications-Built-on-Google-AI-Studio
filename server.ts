@@ -80,7 +80,7 @@ const RESUME_DATA = {
       location: "Nadiad, Gujarat, India",
       type: "AI & Full-Stack Engineering",
       bullets: [
-        "Released four AI agent projects at v1.0.0 on GitHub, each with automated tests and CI.",
+        "Released v1.0.0 of ten AI-agent demo projects on GitHub, each with automated tests and CI, using offline mock LLMs by default.",
         "Built an agent inventory and governance dashboard with Next.js, FastAPI, and SQLAlchemy, deployed on Vercel (frontend) and Railway (backend).",
         "Built an AI newsletter automation workflow that gathers sources, summarizes them with an LLM, and sends a formatted email digest.",
       ],
@@ -239,7 +239,7 @@ Profile Summary:
 - Transition Story: Full-stack developer with solid foundations in Python, .NET (C#), SQL, and WordPress, actively transitioning into hands-on AI engineering. Builds autonomous AI agents, tool-calling pipelines, prompt architectures, and multimodal systems deployed on Railway and Vercel.
 
 Work Experience:
-1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released four AI agent projects at v1.0.0 with tests and CI (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow.
+1. AI Engineer (Self-directed & Portfolio Projects, Sept 2026 - Present): Released v1.0.0 of ten AI-agent demo projects with tests and CI, using offline mock LLMs by default (including incident-commander-ai, a simulated-environment demo); built an agent governance dashboard (Next.js, FastAPI, SQLAlchemy; Vercel and Railway) and a newsletter automation workflow.
 2. Tanmay Travels (Relationship Manager, Nov 2024 - Aug 2026): Maintained operational reporting systems, solved user complaints, and handled internal technical ticketing.
 3. Craig Spodak (Freelance Graphic Designer, June 2024): Designed business cards using Adobe Illustrator, Photoshop and InDesign.
 4. Claire Beauty Parlor and Salon (WordPress Developer, May 2024 - Nov 2024): Customized themes/plugins, performance optimization, SEO (Yoast), and site analytics.
